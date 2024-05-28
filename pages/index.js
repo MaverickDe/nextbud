@@ -35,9 +35,9 @@ export default function Home() {
       </Head>
       {/* <Layout> */}
       <Mainnav/>
-      {/* <HeroSection /> */}
-      {/* <Overview /> */}
-      {/* <Projects /> */}
+      <HeroSection />
+      <Overview />
+      <Projects />
       {/* <Atten /> */}
       <Solution />
       {/* <Sub />  */}
