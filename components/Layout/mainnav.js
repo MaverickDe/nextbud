@@ -111,7 +111,7 @@ const Nav = () => {
         
           </Link>
         </div>
-        <div className=" flex gap-[30px]  max-md:hidden  justify-center md:items-center">
+        <div className=" flex gap-[30px]  max-md:hidden font-nueuthin  justify-center md:items-center">
               {[
                 { link: "/aboutus", name: "About us" },
                 { link: "/contact", name: "Product Features" },
