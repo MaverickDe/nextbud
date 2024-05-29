@@ -94,7 +94,7 @@ const Nav = () => {
   //   v3()
   // }, [])
   return (
-    <section className="w-full fixed top-[0px] left-[0px] md:static z-10 box-border">
+    <section className="w-full fixed top-[0px] left-[0px] md:static z-30 box-border">
       <section className="w-full bg-[white] box-b relative text-[black] min-h-[40px] box-border flex  justify-between items-center px-5 py-3">
         <div className="flex justify-center items-center gap-[10px]">
           <Link
