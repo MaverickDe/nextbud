@@ -21,7 +21,7 @@ import Marquee from "../Layout/flagmarque";
 const HeroSection = () => {
   return (
     <section className="w-full mt-20   min-h-[60vh] py-5 px-3 flex flex-col justify-center items-center  text-[black] dark:text-[white]   bg-center bg-cover">
-      <h1 className={`${poppins.className} font-bold  text-[1rem]  text-center max-sm:text-[4rem] sm:text-[3rem] md:text-[4rem]  font-bold flex gap-5 max-sm:flex-col max-sm:gap-0`}>
+      <h1 className={`${poppins.className} font-bold  text-[1rem]  text-center max-sm:text-[3.3rem] sm:text-[3rem] md:text-[4rem]  font-bold flex gap-5 max-sm:flex-col max-sm:gap-0`}>
         <span className="font-nueubig">
         Home Away
 
