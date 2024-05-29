@@ -19,7 +19,7 @@ const Overview = () => {
     <section className="relative w-full flex max-md:flex-col justify-center items-center gap-[10px] my-5 p-5 py-20 shadow-md bg-[black] ">
          <div className="w-full text-[white] gap-5 flex flex-col justify-center  gap-[10px]    max-w-[1300px] font-bold" >
         
-              <p className="font-bold text-[20px] md:text-[25px]  relative text-[#FFFFFF]">
+              <p className="font-bold font-nueuthin text-[20px] md:text-[25px]  relative text-[#FFFFFF]">
               Special Offer for Influencers
 
         

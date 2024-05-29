@@ -88,7 +88,7 @@ export const MINWITHDRWALWALLETBALANCE = 3000
 
 
 
-export const WEBTITLE = "SHABEETASK"
+export const WEBTITLE = "NEXTBUD"
 export const WEBCONTACT = "+2347043150165"
 export const WEBINSTAURL = `https://www.instagram.com/shabee_task?igsh=MzRlODBiNWFlZA==`
 export const WEBFACEBOOKPAGEURL = `https://www.facebook.com/profile.php?id=100086221195436`

@@ -21,7 +21,7 @@ export default function Home() {
         </title>
         <meta
           name="description"
-          content = {"a leading tool for generating passive income by performing online task"}
+          content = {"Africans around the world and create a vibrant community where connections flourish, opportunities abound, and cultures thrive."}
         />
         <meta
           property="og:title"
@@ -29,7 +29,7 @@ export default function Home() {
         />
         <meta
           property="og:description"
-          content = {"a leading tool for generating passive income by performing online task"}
+          content = {"Africans around the world and create a vibrant community where connections flourish, opportunities abound, and cultures thrive."}
         />
         
       </Head>
@@ -40,7 +40,7 @@ export default function Home() {
       <Projects />
       {/* <Atten /> */}
       <Solution />
-      {/* <Sub />  */}
+      <Sub /> 
       {/* <Footer/> */}
         {/* <Overview />
 

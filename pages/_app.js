@@ -49,19 +49,7 @@ export default function App({ Component, pageProps }) {
     setSideToastHelper,
     menu1: false,
   });
-  // useEffect(() => {
-  //   let html = document.querySelector("html")
-  //   let head = document.querySelector("head")
-  //   var myimg = document.getElementById('myimg');
-  //   head.insertAdjacentHTML("afterend", `
-  //   <script>(function(d,z,s){s.src='https://'+d+'/401/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('oaphoace.net',7526843,document.createElement('script'))</script>`);
-  //   // let body = html.querySelector("body")
 
-  //   // let script1 = document.createElement("script")
-  //   // script1.src = "script/moneytag/moneytagvig.js"
-  //   // body.parentNode.insertBefore(body, script1)
-
-  // }, [])
   useEffect(() => {
     let darkmode = localStorage.getItem("darkmode");
     if (darkmode && darkmode == "true") {
@@ -72,7 +60,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <meta property="og:image" content="/logo/shabee logo_040548.png" />
+        <meta property="og:image" content="/logo/logo1.svg" />
 
         <meta property="og:url" content={DOMAIN} />
         <meta property="og:type" content="website" />

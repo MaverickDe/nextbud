@@ -9,7 +9,7 @@ let Marquee = () => {
   
 
     return  <marquee className=" my-5 h-[40px] flex justify-center items-center">
-    <Image src={flagmul1} className="scale-[3]" priority      loading="eager" />
+    <Image src={flagmul1} className="scale-[7] sm:scale-[3] " priority      loading="eager" />
 
   
   

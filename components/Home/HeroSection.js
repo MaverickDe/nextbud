@@ -20,19 +20,19 @@ import Marquee from "../Layout/flagmarque";
 
 const HeroSection = () => {
   return (
-    <section className="w-full   min-h-[60vh] py-5 px-3 flex flex-col justify-center items-center  text-[black] dark:text-[white]   bg-center bg-cover">
-      <h1 className={`${poppins.className} text-[1rem] text-center max-sm:text-[2.4rem] sm:text-[3rem] md:text-[4rem]  font-bold flex gap-5 max-sm:flex-col max-sm:gap-0`}>
-        <span>
-
+    <section className="w-full mt-20   min-h-[60vh] py-5 px-3 flex flex-col justify-center items-center  text-[black] dark:text-[white]   bg-center bg-cover">
+      <h1 className={`${poppins.className} font-bold  text-[1rem]  text-center max-sm:text-[4rem] sm:text-[3rem] md:text-[4rem]  font-bold flex gap-5 max-sm:flex-col max-sm:gap-0`}>
+        <span className="font-nueubig">
         Home Away
+
         </span>
-        <span>
+        <span className="font-nueubig">
 
         From Home
         </span>
        
       </h1>
-      <p className=" w-[80%] text-justify text-break  text-[10px] max-sm:text-[15px] md:text-[19px] text-center my-5">
+      <p className=" w-[80%] max-sm:w-[95%] font-nueuthin text-justify text-break  text-[10px] max-sm:text-[15px] md:text-[19px] text-center my-5">
       Africans around the world and create a vibrant community where connections flourish, opportunities abound, and cultures thrive. </p>
       <div className="flex justify-between md:px-10 w-full max-md:justify-center">
           <Image src={imageflag1} className="w-[40px] max-md:hidden" priority      loading="eager" />
@@ -44,7 +44,8 @@ const HeroSection = () => {
           <Image src={imageflag2} className="w-[40px] max-md:hidden" priority      loading="eager" />
 
       </div>
-          <Image src={heroimage1} className="w-[80%]" priority      loading="eager" />
+          <Image src={heroimage1} className="w-[80%] max-md:hidden" priority      loading="eager" />
+          <Image src={heroimage2} className="w-[80%] md:hidden mt-10" priority      loading="eager" />
 
      <Marquee/>
      

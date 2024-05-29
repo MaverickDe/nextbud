@@ -10,6 +10,15 @@
   --secondary-color-1: #1E1E1E;
   --secondary-color-2: #7A7A7B;
 }
+@font-face {
+  font-family: 'CustomFont'; /* Name your font family */
+  src: url('../public/font/montreal/NeueMontreal-Bold.otf'); /* Locate the .ttf file within your directory*/
+}
+
+body {
+  font-family: 'CustomFont', sans-serif; 
+  /* Use the font family */
+}
 
 /* .menu_con{
   @extend .menu_con_
@@ -17,6 +26,22 @@
 .menu_active{
 @extend .menu_active_
 } */
+
+@layer base {
+  @font-face {
+    font-family: nueubig;
+    font-weight: 400;
+    src: url(../public/font/montreal/NeueMontreal-Bold.otf) format("woff");
+  }
+  @font-face {
+    font-family: nueuthin;
+    font-weight: 400;
+    src: url(../public/font/montreal/NeueMontreal-Regular.otf) format("woff");
+  }
+
+}
+
+
 
 @layer utilities{
 

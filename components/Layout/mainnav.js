@@ -94,8 +94,8 @@ const Nav = () => {
   //   v3()
   // }, [])
   return (
-    <section className="w-full fixed top-[0px] left-[0px] md:static z-10">
-      <section className="w-full relative text-[black] min-h-[40px] flex justify-between items-center px-5 py-3">
+    <section className="w-full fixed top-[0px] left-[0px] md:static z-10 box-border">
+      <section className="w-full bg-[white] box-b relative text-[black] min-h-[40px] box-border flex  justify-between items-center px-5 py-3">
         <div className="flex justify-center items-center gap-[10px]">
           <Link
             className="flex justify-center items-center gap-[10px]"
@@ -104,27 +104,58 @@ const Nav = () => {
             <Image
               alt="image"
               src={logo}
-              className="w-[50px] scale-[3.2] "
+              className=" "
               priority
               loading="eager"
             />
         
           </Link>
         </div>
+        <div className=" flex gap-[30px]  max-md:hidden  justify-center md:items-center">
+              {[
+                { link: "/aboutus", name: "About us" },
+                { link: "/contact", name: "Product Features" },
+                { link: "/privacy", name: "Contact us" },
+              ].map((e, index) => {
+                return (
+                  <Link
+                    className="w-fit"
+                    onClick={() => {}}
+                    key={index}
+                    href={e.link}
+                  >
+                    {e.name}
+                  </Link>
+                );
+              })}
+            </div>
+            <div className=" max-md:hidden text-primary flex gap-[10px] flex-col md:flex-row  justify-center md:items-center ">
+        
+              <Link
+                onClick={() => {
+                  UseAppDispatch(setmenu1());
+                }}
+                className="w-full md:w-fit bg-[black] text-[white] rounded-md px-10 py-1.5 flex justify-center items-center"
+                href={"/signup"}
+              >
+               Get Started
+              </Link>
+          
+            </div>
         <div
           onClick={() => {
             UseAppDispatch(setmenu1());
           }}
           className={`  ${
             menu1 ? "max-md:menu_active" : "max-md:menu_con"
-          }    w-full   h-[100vh] md:h-fit  absolute md:static  z-10   top-[100%] left-0 flex flex-col md:flex-row gap-[30px] md:justify-end  md:items-end `}
+          }    w-full md:hidden   h-[100vh] md:h-fit  absolute md:static  z-10   top-[100%] left-0 flex flex-col md:flex-row gap-[30px] md:justify-end  md:items-end `}
         >
           <div
             data-open="0"
             onClick={(e) => {
               e.stopPropagation();
             }}
-            className={`    h-full bg-secondary    w-fit flex flex-col     md:flex-row gap-[30px] md:justify-center  md:items-center p-5 md:p-0`}
+            className={`    h-full bg-secondary    w-full  flex flex-col     md:flex-row gap-[30px] md:justify-center  md:items-center p-5 md:p-0`}
           >
             <div className="text-secondary2 flex gap-[10px] flex-col md:flex-row  justify-center md:items-center">
               {[
@@ -184,7 +215,7 @@ const Nav = () => {
         >
           <FontAwesomeIcon
             icon={menu1 ? faX : faBars}
-            className="text-primary"
+            className="text-[black]"
           />
           {/* <i className="fa-solid fa-bars text-primary "></i> */}
         </div>

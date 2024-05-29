@@ -10,7 +10,6 @@ export default function Document() {
     <Html lang="en" className='dar'>
       <Head >
 
-      <meta name="monetag" content="163bde9480fb0e2d4fd08d5b6b66f7f5"></meta>
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
@@ -22,10 +21,7 @@ export default function Document() {
       <body className='text-secondary dark:text-secondary2 bg-light1 dark:bg-dark1'>
 
     
-        {/* <Script strategy="beforeInteractive" src="script/moneytag/moneytaginpageanti.js" />
-      <Script strategy="beforeInteractive" src="script/moneytag/moneytagviganti.js" />
-  
-     */}
+    
 
    
    

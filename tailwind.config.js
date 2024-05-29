@@ -15,6 +15,8 @@ import  withMT from "@material-tailwind/react/utils/withMT";
     extend: {
       fontFamily: {
         intria: "var(--intria-sans)",
+        nueubig: ["nueubig", "sans-serif"],
+        nueuthin: ["nueuthin", "sans-serif"],
       },
       colors: {
         primary: "#FFD600",
