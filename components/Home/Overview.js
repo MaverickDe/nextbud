@@ -23,17 +23,24 @@ const Overview = () => {
       <Image src={img8} className="w-[30px] absolute top-[30px] right-[40px]" priority      loading="eager" />
       <div className="w-full text-[white] gap-5 flex flex-col justify-center items-center gap-[10px]    max-w-[1300px] font-bold" >
         
-        <h1 className="font-bold text-[3rem] md:text-[3rem]  relative nueubold self-start">About us
+        <h1 className="font-bold text-[3rem] md:text-[3rem]  relative nueubold self-start">About Us
         <Image src={img23} className="w-[100px] absolute left-[70%] top-[40px]" priority      loading="eager" />
 
         
         </h1>
-      <p className="my-5">
+        <div className="my-5 font-nueuthin">
+          <p className=" font-nueuthin">
+
       At NextBud, we're on a mission to unite Africans around the world and create a vibrant community where connections flourish, opportunities abound, and cultures thrive. Our platform is more than just a social networking app — it's a gateway to meaningful relationships, empowering experiences, and endless possibilities.
- 
+          </p>
+          <br/>
+          <p className=" font-nueuthin">
+
 Founded in 2024, NextBud was born out of a passion for bringing people together and bridging geographical boundaries. We understand the importance of staying connected to your roots while exploring new horizons, and that's why we've created a platform that celebrates the diversity, resilience, and creativity of the African diaspora.
+          </p>
  
-        </p>
+ 
+        </div>
         <div className="flex w-fit gap-10 max-md:flex-col max-md:gap-5 justify-center items-center ">
           <Image src={goggle} className="w-[150px] max-md:w-[150px]" priority      loading="eager" />
 

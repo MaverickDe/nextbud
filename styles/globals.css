@@ -4,7 +4,10 @@
 
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
-
+.cc{
+  transform: unset;
+  
+}
 :root {
   --primary-color: #ED3237;
   --secondary-color-1: #1E1E1E;
@@ -13,6 +16,96 @@
 @font-face {
   font-family: 'CustomFont'; /* Name your font family */
   src: url('../public/font/montreal/NeueMontreal-Bold.otf'); /* Locate the .ttf file within your directory*/
+}
+
+
+
+
+@keyframes marquee {
+  0% {
+      transform: translateX(0%);
+  }    
+  50% {
+      transform: translateX(100%);
+  }
+  50.001% {
+      transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(0%);
+  }
+}
+
+@keyframes marquee2 {
+  0% {
+      top:0px;
+      /* position: absolute;
+      bottom:auto; */
+   
+  }  
+
+  50% {
+      /* bottom:0px;
+      position: absolute; */
+      top:-100%;
+      
+  }
+  100% {
+      /* bottom:0px;
+      position: absolute; */
+      top:0px;
+      
+  }
+
+}
+
+@keyframes marquee3 {
+  0% {
+      top:-100%;
+      /* position: absolute;
+      bottom:auto; */
+   
+  }  
+
+  50% {
+      /* bottom:0px;
+      position: absolute; */
+      top:0%;
+      
+  }
+  100% {
+      /* bottom:0px;
+      position: absolute; */
+      top:-100%;
+      
+  }
+
+}
+
+
+
+
+/* .marcup {
+  animation: scrollYup 7s linear 0s infinite;
+
+ 
+} */
+
+.marcdown {
+  animation: marquee2 20s ease-out 0s infinite;
+
+ 
+}
+.marcdown2 {
+  animation: marquee3 20s ease-out 0s infinite;
+
+ 
+}
+.marcdown3 {
+
+  animation: marquee 180s ease-out 0s infinite;
+
+ 
 }
 
 body {

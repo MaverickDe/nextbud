@@ -45,7 +45,7 @@ const HeroSection = () => {
 
       </div>
           <Image src={heroimage1} className="w-[80%] max-md:hidden" priority      loading="eager" />
-          <Image src={heroimage2} className="w-[80%] md:hidden mt-10" priority      loading="eager" />
+          <Image src={heroimage2} className="w-[80%] md:hidden mt-10 " priority      loading="eager" />
 
      <Marquee/>
      
