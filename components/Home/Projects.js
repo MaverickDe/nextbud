@@ -117,7 +117,7 @@ const Projects = () => {
         </div>
         
               
-        <div className=" p-5 relative box-border  overflow-hidden  max-sm:flex-col-reverse justify-between  rounded-[30px] bg-[linear-gradient(45deg,#10B904,#95ea8f),linear-gradient(60deg,#EFE6F7,#9864F1)] w-full flex gap-5 ">
+        <div className=" p-5 relative box-border  overflow-hidden  max-sm:flex-col-reverse justify-between  rounded-[30px] bg-[linear-gradient(45deg,#10B904,#95ea8f_30%),linear-gradient(60deg,#EFE6F7,#9864F1)] w-full flex gap-5 ">
     <Image src={img16} className="z-1 absolute  bottom-0 right-0 " priority      loading="eager" />
     <div className=" z-10 w-[50%] h-[500px]  max-sm:w-full flex p box-border justify-between  gap-5">
       
