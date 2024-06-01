@@ -33,7 +33,9 @@ const HeroSection = () => {
        
       </h1>
       <p className=" w-[80%] max-sm:w-[95%] font-nueuthin   text-[10px] max-sm:text-[20px] md:text-[19px] text-center self-center my-5">
-      Africans around the world and create a vibrant community where connections flourish, opportunities abound, and cultures thrive. </p>
+      Connecting you to other Africans in the UK, Canada, USA, and Europe, starting from your city and beyond.
+
+ </p>
       <div className="flex justify-between md:px-10 w-full max-md:justify-center">
           <Image src={imageflag1} className="w-[40px] max-md:hidden" priority      loading="eager" />
         <div className="flex w-fit gap-10 max-md:flex-col max-md:gap-5 justify-center items-center ">

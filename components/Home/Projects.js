@@ -97,7 +97,8 @@ const Projects = () => {
         <div className=" p-5 relative box-border  overflow-hidden  flex flex-col items-center justify-center  rounded-[30px] bg-[#E0F7FF] w-full max-sm:w-full ">
 
             <h1 className="text-[#036181] self-start font-bold text-[2rem] nueubold">Buddy Room</h1>
-            <p className="text-[black] self-start font-nueuthin">Create or attend an unlimited number of events</p>
+            <p className="text-[black] self-start font-nueuthin">Join or host a variety of events, plan group trip and activities on Buddy room 
+</p>
             <Image src={img6} className=" w-[80%] z-10 " priority      loading="eager" />
         
     <Image src={img14} className="z-1 absolute  bottom-0 left-0 " priority      loading="eager" />
@@ -108,7 +109,8 @@ const Projects = () => {
 
             <Image src={img13} className=" w-[80%] " priority      loading="eager" />
             <h1 className="text-[#B20462] self-start font-bold text-[2rem] z-10 nueubold">Mart</h1>
-            <p className="text-[black] font-nueuthin self-start z-10">Host your businesses and services on our Marketplace</p>
+            <p className="text-[black] font-nueuthin self-start z-10">
+Support African businesses and services in the diaspora through our marketplace</p>
         
     <Image src={img15} className="z-1 absolute  bottom-0 right-0 " priority      loading="eager" />
         
@@ -154,7 +156,8 @@ const Projects = () => {
               </span>
             </h1>
             <div className="w-full ">
-              <p className="text-[black] w-full font-nueuthin">Option to remain anonymous when asking questions or providing answers, providing greater privacy and control over online presence.</p>
+              <p className="text-[black] w-full font-nueuthin">Get trusted advice from fellow Africans in the diaspora. Ask questions anonymously for greater privacy and control over your online presence. Contributors are rewarded for their helpful answers.
+</p>
               <button className="text-[black] rounded-md px-5 py-3 my-5 text-bold border-[1px] border-[black]">Get the app</button>
             </div>
            
