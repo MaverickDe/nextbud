@@ -104,7 +104,7 @@ const Nav = () => {
             <Image
               alt="image"
               src={logo}
-              className=" "
+              className=" w-[120px]"
               priority
               loading="eager"
             />
@@ -155,9 +155,9 @@ const Nav = () => {
             onClick={(e) => {
               e.stopPropagation();
             }}
-            className={`    h-full bg-secondary    w-full  flex flex-col     md:flex-row gap-[30px] md:justify-center  md:items-center p-5 md:p-0`}
+            className={`    h-full  bg-[white]    w-full  flex flex-col     md:flex-row gap-[30px] md:justify-center  md:items-center p-5 md:p-0`}
           >
-            <div className="text-secondary2 flex gap-[10px] flex-col md:flex-row  justify-center md:items-center">
+            <div className="text-[black] flex gap-[10px] flex-col md:flex-row  justify-center md:items-center">
               {[
                 { link: "/aboutus", name: "About us" },
                 { link: "/contact", name: "Product Features" },

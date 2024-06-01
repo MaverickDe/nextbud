@@ -41,7 +41,7 @@ const Projects = () => {
         </span>
        
       </h1>
-        <div className="w p-5 relative box-border  overflow-hidden   rounded-[30px] bg-[linear-gradient(-45deg,#9864F1,#EFE6F7,#9864F1),linear-gradient(60deg,#EFE6F7,#9864F1)] w-full ">
+        <div className="w p-5 relative box-border  overflow-hidden   rounded-[30px] bg-[linear-gradient(-45deg,#9864F1,#EFE6F7,#9864F1),linear-gradient(60deg,#EFE6F7,#9864F1)] max-sm:bg-[linear-gradient(45deg,#EFE6F7,#9864F1),linear-gradient(60deg,#EFE6F7,#9864F1)] w-full ">
     <Image src={img5} className="z-5 absolute  bottom-0 left-0 " priority      loading="eager" />
           <div className="w-[30%]">
 

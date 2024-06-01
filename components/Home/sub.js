@@ -22,7 +22,7 @@ const Testimonial = () => {
             <Image
               alt="image"
               src={logo}
-              className=""
+              className=" w-[120px]"
               priority
               loading="eager"
             />

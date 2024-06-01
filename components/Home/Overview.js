@@ -23,13 +23,13 @@ const Overview = () => {
       <Image src={img8} className="w-[30px] absolute top-[30px] right-[40px]" priority      loading="eager" />
       <div className="w-full text-[white] gap-5 flex flex-col justify-center items-center gap-[10px]    max-w-[1300px] font-bold" >
         
-        <h1 className="font-bold text-[3rem] md:text-[3rem]  relative nueubold self-start">About Us
+        <h1 className="font-bold text-[3rem] md:text-[3rem]  relative  self-start">About Us
         <Image src={img23} className="w-[100px] absolute left-[70%] top-[40px]" priority      loading="eager" />
 
         
         </h1>
-        <div className="my-5 font-nueuthin">
-          <p className=" font-nueuthin">
+        <div className="my-5 font-nueuthin text-[#d1d1d1]">
+          <p className=" font-nueuthin ">
 
       At NextBud, we're on a mission to unite Africans around the world and create a vibrant community where connections flourish, opportunities abound, and cultures thrive. Our platform is more than just a social networking app — it's a gateway to meaningful relationships, empowering experiences, and endless possibilities.
           </p>
