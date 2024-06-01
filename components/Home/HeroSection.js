@@ -33,7 +33,8 @@ const HeroSection = () => {
        
       </h1>
       <p className=" w-[80%] max-sm:w-[95%] font-nueuthin   text-[10px] max-sm:text-[20px] md:text-[19px] text-center self-center my-5">
-      Connecting you to other Africans in the UK, Canada, USA, and Europe, starting from your city and beyond.
+      Connecting you to other Africans in the diaspora starting from your city and beyond.
+
 
  </p>
       <div className="flex justify-between md:px-10 w-full max-md:justify-center">

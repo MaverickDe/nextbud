@@ -66,7 +66,7 @@ const Projects = () => {
           </div>
           <div className=" z-10 w-full flex p box-border justify-between max-sm:flex-col">
             <div className="w-[30%] max-sm:w-full">
-              <p className="text-[black] font-nueuthin">Connect with an unlimited number of Africans in the UK on the Find Buddy page, expanding networking opportunities across borders.</p>
+              <p className="text-[black] font-nueuthin">Network with thousands of Africans in the diaspora through our Find Buddy page, starting with your city.</p>
               <button className="text-[black] rounded-md px-5 py-3 my-5 text-bold border-[1px] border-[black] z-10">Get the app</button>
             </div>
             <div className="w-[60%] flex gap-5 flex-col max-sm:w-full box-border">
