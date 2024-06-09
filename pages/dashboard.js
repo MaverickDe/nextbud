@@ -23,8 +23,8 @@ let [selectItem,setselectItem]= useState("")
 
     return <div className="w-full">
         <div className="bg-[black] ">
-            <div className="text-[white] p-5 flex justify-between items-center mb-[50px]">
-                <div className="flex gap-20 justify-center items-center">
+            <div className="text-[white] p-5 flex justify-between items-center mb-[50px] max-md:flex-col max-md:gap-5">
+                <div className="flex gap-20 justify-center items-center ">
 
 
                 <div className="flex flex-col items-center justify-center">
@@ -37,7 +37,7 @@ let [selectItem,setselectItem]= useState("")
                     />
                     <p>Influencers</p>
                 </div>
-                <button className="font-nueuthin flex gap-3 justify-center items-center px-5 rounded-full bg-[#2F2F2F] h-[40px] overflow-clip">
+                <button className="  font-nueuthin flex gap-3 justify-center items-center px-5 rounded-full bg-[#2F2F2F] h-[40px] overflow-clip">
                 <Image
               alt="image"
               src={house}
@@ -62,7 +62,7 @@ let [selectItem,setselectItem]= useState("")
                         <p>Grace Leihn</p>
                     </option>
                 </select> */}
-                <div className="flex font-nueuthin  max-w-xs  gap-2 items-center px-5 rounded-md bg-[#2F2F2F] h-[40px]">
+                <div className="max-md:self-end flex font-nueuthin  max-w-xs  gap-2 items-center px-5 rounded-md bg-[#2F2F2F] h-[40px]">
                     
                     <div className="flex gap-5 items-center">
                     <Image
@@ -97,7 +97,7 @@ let [selectItem,setselectItem]= useState("")
 </div>
                 
             </div>
-            <div className="rounded-t-[100px] flex flex-col gap-5 bg-[white] h-[500px] font-nueuthin px-[60px] py-[100px]">
+            <div className="rounded-t-[100px] max-md:rounded-t-[50px] flex flex-col gap-5 bg-[white] h-[500px] font-nueuthin px-5 py-[100px]">
                 <div>
 
                 <p>Welcome Grace!</p>
@@ -105,7 +105,7 @@ let [selectItem,setselectItem]= useState("")
                 <div className="w-full flex justify-between">
                     <div>
                     <p>Total Balance</p>
-                <h1 className="font-nueubig text-[30px]">&#x24;$800.99
+                <h1 className="font-nueubig text-[30px] max-sm:text-[23px]">&#x24;$800.99
 </h1>
                         </div>
                     <div>

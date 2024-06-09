@@ -130,7 +130,7 @@ const Nav = () => {
                 );
               })}
             </div>
-            <div className="flex w-fit gap-10 max-md:flex-col max-md:gap-5 justify-center items-center ">
+            <div className="flex w-fit max-md:hidden gap-10 max-md:flex-col max-md:gap-5 justify-center items-center ">
           <Image src={goggle} className="w-[150px] " priority      loading="eager" />
 
           <Image src={apple} className="w-[150px] " priority      loading="eager" />
@@ -167,7 +167,12 @@ const Nav = () => {
                   </Link>
                 );
               })}
-            </div>
+                      </div>
+                      <div className="flex w-fit gap-10 max-md:flex-col max-md:gap-5 justify-center items-center ">
+          <Image src={goggle} className="w-[150px] " priority      loading="eager" />
+
+          <Image src={apple} className="w-[150px] " priority      loading="eager" />
+        </div>
             <div className="text-primary flex gap-[10px] flex-col md:flex-row  justify-center md:items-center ">
         
               <Link
