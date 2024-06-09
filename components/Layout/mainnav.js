@@ -113,8 +113,8 @@ const Nav = () => {
         </div>
         <div className=" flex gap-[30px]  max-md:hidden font-nueuthin  justify-center md:items-center">
               {[
-                { link: "#aboutus", name: "About us" },
-                { link: "#features", name: "Product Features" },
+                { link: "/#aboutus", name: "About us" },
+                { link: "/#features", name: "Product Features" },
                 { link: "#privacy", name: "Contact us" },
               ].map((e, index) => {
                 return (
@@ -159,8 +159,8 @@ const Nav = () => {
           >
             <div className="text-[black] flex gap-[10px] flex-col md:flex-row  justify-center md:items-center">
               {[
-                { link: "#aboutus", name: "About us" },
-                { link: "#features", name: "Product Features" },
+                { link: "/#aboutus", name: "About us" },
+                { link: "/#features", name: "Product Features" },
                 { link: "/privacy", name: "Contact us" },
               ].map((e, index) => {
                 return (

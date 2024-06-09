@@ -32,9 +32,9 @@ const Footer = () => {
               <div >
                   <p className="text-[#656565]">Legal</p>
                   <div className="font-nueuthin flex flex-wrap gap-5">
-                     <Link href="/">Privacy Policy</Link>
-                     <Link href="/">Terms of Service</Link>
-                     <Link href="/">Acceptable use policy</Link>
+                     <Link href="/privacy">Privacy Policy</Link>
+                     <Link href="/tos">Terms of Service</Link>
+                     <Link href="/acceptibilitypol">Acceptable use policy</Link>
                   </div>
               </div>
           <div className="flex gap-5 max-sm:w-full max-sm:justify-between flex-wrap">
