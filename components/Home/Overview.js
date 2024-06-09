@@ -15,7 +15,7 @@ import img23 from "../../public/images/images/img23.svg";
 
 const Overview = () => {
   return (
-    <section className="relative w-full flex max-md:flex-col-reverse justify-center items-center gap-[10px] my-5 p-5 py-20 shadow-md bg-[black] rounded-[30px] ">
+    <section id="aboutus" className="relative w-full flex max-md:flex-col-reverse justify-center items-center gap-[10px] my-5 p-5 py-20 shadow-md bg-[black] rounded-[30px] ">
       <div className="w-[50%] max-md:w-full overflow-clip">
 
       <Image src={img2} className="w-full max-md:scale-[1.3]" priority      loading="eager" />

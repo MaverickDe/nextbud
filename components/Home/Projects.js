@@ -27,7 +27,7 @@ const Projects = () => {
   const router = useRouter();
 
   return (
-    <section className="w-full flex justify-center bg-[white] items-center p-5 py-20">
+    <section id="features" className="w-full flex justify-center bg-[white]  items-center p-5 py-20">
     <section className=" relative text-secondary2  max-w-[1300px]  relative w-full min-h-[100px] flex justify-between items-center flex-col gap-[10px] ">
     <h1 className={`${poppins.className} font-bold  text-[1rem]   max-sm:text-[3.5rem] my-10 sm:text-[3rem] md:text-[4rem]  font-bold flex gap-5 max-sm:flex-col max-sm:gap-0 text-[black] self-start`}>
         <span className="font-nueubig">
@@ -119,7 +119,7 @@ Support African businesses and services in the diaspora through our marketplace<
         </div>
         
               
-        <div className=" p-5 relative box-border  overflow-hidden  max-sm:flex-col-reverse justify-between  rounded-[30px] bg-[linear-gradient(45deg,#10B904,#95ea8f_30%),linear-gradient(60deg,#EFE6F7,#9864F1)] w-full flex gap-5 ">
+        <div className=" p-5 relative box-border  overflow-hidden  max-sm:flex-col-reverse justify-between  rounded-[30px] bg-[linear-gradient(45deg,#10B904,#EEFAED_70%),linear-gradient(60deg,#EFE6F7,#9864F1)] w-full flex gap-5 ">
     <Image src={img16} className="z-1 absolute  bottom-0 right-0 " priority      loading="eager" />
     <div className=" z-10 w-[50%] h-[500px]  max-sm:w-full flex p box-border justify-between  gap-5">
       

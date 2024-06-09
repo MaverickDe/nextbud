@@ -1,9 +1,10 @@
- @tailwind base;
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
+
 .cc{
   transform: unset;
   
@@ -28,9 +29,7 @@
   50% {
       transform: translateX(100%);
   }
-  50.001% {
-      transform: translateX(100%);
-  }
+
   100% {
       transform: translateX(0%);
   }
@@ -153,8 +152,8 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 0px;
-  height: 10px;
+  /* width: 0px;
+  height: 10px; */
 }
 /* body::-webkit-scrollbar-thumb {
   background: linear-gradient(to bottom right, #4d7fff 0%, #1a56ff 100%);
@@ -172,7 +171,60 @@ body {
 }
 
 /* HAMBURGER MENU */
+.slider-container div{
+ 
+  
+  height: 100% !important;
+}
 
+.slider-container .slick-track
+{
+    display: flex !important;
+    height: 100%
+}
+
+.slider-container .slick-slide 
+{
+    height: 100% !important;
+}
+.c_ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.c_li {
+  padding-left: 1em;
+  text-indent: -1em;
+}
+
+.c_li:before {
+  content: ".";
+
+width: 5px;
+height: 5px;
+font-weight: bolder;
+border-radius: 50%;
+/* background-color: black; */
+padding-right: 20px;
+}
+
+
+.oc_li{
+  display: decimal;
+  list-style-position: inside;
+}
+
+/* .c_li:before {
+  content: '';
+position: absolute;
+bottom: 7px;
+left: -10px;
+width: 3px;
+height: 3px;
+background-color: #000;
+border-radius: 50%;
+} */
 
 
 .hamburger {
@@ -197,7 +249,7 @@ body {
 }
 .slick-list{
   border-radius: 15px;
-  height: fit;
+
 }
 
 .slick-dots li button:before
@@ -365,9 +417,9 @@ z-index: 1;
   }
 }
 @keyframes animate_slide-right {
-  0% { transform: translateX(100%) ;opacity: 0 };
-  50% { transform: translateX(50%);opacity: 0.5 };
-  100%{ transform: translateX(0%); opacity: 1 };
+  0% { transform: translateX(100%) ; opacity: 0 }
+  50% { transform: translateX(50%); opacity: 0.5 }
+  100% { transform: translateX(0%); opacity: 1 }
 }
 
 .slide_right {

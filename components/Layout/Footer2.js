@@ -13,8 +13,9 @@ import Marquee from "../Layout/flagmarque";
 
 const Footer = () => {
   return (
-    <section className="w-full p-5  mt-20">
-    <section className="w-full flex  justify-between sm:items-center  max-sm:flex-col">
+    <section className="w-full p-5  ">
+    <section className="w-full flex flex-wrap gap-5  justify-between sm:items-center  max-sm:flex-col">
+          
       <Link
             className="flex  gap-[10px] max-sm:mb-5 "
             href="/"
@@ -27,11 +28,19 @@ const Footer = () => {
               loading="eager"
             />
         
-          </Link>
-          <div className="flex gap-5 max-sm:w-full max-sm:justify-between">
+              </Link>
+              <div >
+                  <p className="text-[#656565]">Legal</p>
+                  <div className="font-nueuthin flex flex-wrap gap-5">
+                     <Link href="/">Privacy Policy</Link>
+                     <Link href="/">Terms of Service</Link>
+                     <Link href="/">Acceptable use policy</Link>
+                  </div>
+              </div>
+          <div className="flex gap-5 max-sm:w-full max-sm:justify-between flex-wrap">
               <div>
                   <p className="text-[#656565] mb-5">Contact us</p>
-                  <p>Support@nextbud.com</p>
+                  <p className="font-nueuthin">Support@nextbud.com</p>
               </div>
               <div>
                   <p className="text-[#656565] mb-5">Socials</p>

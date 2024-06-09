@@ -11,7 +11,14 @@ import  withMT from "@material-tailwind/react/utils/withMT";
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  theme: {
+   theme: {
+    listStyleType: {
+      none: 'none',
+      disc: 'disc',
+      decimal: 'decimal',
+      square: 'square',
+      roman: 'upper-roman',
+    },
     extend: {
       fontFamily: {
         intria: "var(--intria-sans)",

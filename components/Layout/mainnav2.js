@@ -7,7 +7,8 @@ import Image from "next/image";
 import { gelasio } from "@/fonts/general_fonts";
 // Menu
 import { useEffect, useState, useContext, useRef } from "react";
-
+import goggle from "@/public/images/images/google.svg";
+import apple from "@/public/images/images/apple.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
@@ -115,7 +116,7 @@ const Nav = () => {
               {[
                 { link: "#aboutus", name: "About us" },
                 { link: "#features", name: "Product Features" },
-                { link: "#privacy", name: "Contact us" },
+                { link: "/privacy", name: "Contact us" },
               ].map((e, index) => {
                 return (
                   <Link
@@ -129,19 +130,11 @@ const Nav = () => {
                 );
               })}
             </div>
-            <div className=" max-md:hidden text-primary flex gap-[10px] flex-col md:flex-row  justify-center md:items-center ">
-        
-              <Link
-                onClick={() => {
-                  UseAppDispatch(setmenu1());
-                }}
-                className="w-full md:w-fit bg-[black] text-[white] rounded-md px-10 py-1.5 flex justify-center items-center"
-                href={"/signup"}
-              >
-               Get Started
-              </Link>
-          
-            </div>
+            <div className="flex w-fit gap-10 max-md:flex-col max-md:gap-5 justify-center items-center ">
+          <Image src={goggle} className="w-[150px] " priority      loading="eager" />
+
+          <Image src={apple} className="w-[150px] " priority      loading="eager" />
+        </div>
         <div
           onClick={() => {
             UseAppDispatch(setmenu1());

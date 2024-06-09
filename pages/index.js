@@ -9,6 +9,7 @@ import Footer from "@/components/Layout/Footer";
 import Mainnav from "@/components/Layout/mainnav";
 import Sub from "@/components/Home/sub";
 import { WEBTITLE } from "@/components/const";
+import RootLayout from "@/components/Layout/wrapper/layout1"
 
 // import Foote from "@/components/Home/";
 
@@ -34,19 +35,18 @@ export default function Home() {
         
       </Head>
       {/* <Layout> */}
-      <Mainnav/>
+      {/* <Mainnav/> */}
+
+      <RootLayout>
+
       <HeroSection />
       <Overview />
       <Projects />
-      {/* <Atten /> */}
+    
       <Solution />
-      <Sub /> 
-      {/* <Footer/> */}
-        {/* <Overview />
-
-        <Solution />
-        <Testimonial /> */}
-      {/* </Layout> */}
+      </RootLayout>
+      {/* <Sub />  */}
+   
     </>
   );
 }
