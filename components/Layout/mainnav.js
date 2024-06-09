@@ -138,7 +138,7 @@ const Nav = () => {
                 className="w-full md:w-fit bg-[black] text-[white] rounded-md px-10 py-1.5 flex justify-center items-center"
                 href={"/signup"}
               >
-               Get Started
+               Become an Influencer
               </Link>
           
             </div>
@@ -184,7 +184,7 @@ const Nav = () => {
                 className="w-full md:w-fit bg-[black] text-[white] rounded-md px-10 py-1.5 flex justify-center items-center"
                 href={"/signup"}
               >
-               Get Started
+               Become an Influencer
               </Link>
           
             </div>

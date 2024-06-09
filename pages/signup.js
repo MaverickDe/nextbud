@@ -110,7 +110,7 @@ phone5
 {", and "}
                                 
                                
-                                <Link href="/" className="text-transparent bg-clip-text bg-[linear-gradient(-45deg,#6067FA,#9864F1)]">
+                                <Link href="/privacy" className="text-transparent bg-clip-text bg-[linear-gradient(-45deg,#6067FA,#9864F1)]">
                            {"Nondiscrimination Policy "}
                                 
                             </Link>
@@ -126,7 +126,7 @@ phone5
                                 .</p>
                         <p className=" flex gap-5  items-center">
                             <span className="font-nueuthin">
-                            Already a Buddy?
+                            Already an Influencer?
                             </span>
                             <Link href="/login" className="text-transparent bg-clip-text bg-[linear-gradient(-45deg,#6067FA,#9864F1)]">
                             Log in
