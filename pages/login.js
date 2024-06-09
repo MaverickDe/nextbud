@@ -19,7 +19,7 @@ export default function Login() {
         
        <RootLayout2>
  <div  className="w-full flex-col flex-1 md:overflow-y-auto flex justify-center  items-center	">
-            <section className="w-full h-[100%]     flex justify-center  items-center ">
+            <section className="w-full h-[100%] max-md:my-10    flex justify-center  items-center ">
 
                 <div className="w-[50%] h-[100%]  max-lg:hidden flex-end mt-auto ">
                 {/* <Image src={phone1}  className=" h-full " priority      loading="eager" /> */}
