@@ -36,8 +36,12 @@ const Projects = () => {
         </span>
         <span className="font-nueubig relative">
 
-       Just for You
-    <Image src={img23} className=" absolute right-[0%] top-[65px] w-[150px]" priority      loading="eager" />
+            Just for
+            
+            <span className="relative">
+               {" You"}
+    <Image src={img23} className=" absolute left-[10px] bottom-[0%] w-[150px]" priority      loading="eager" />
+            </span>
         </span>
        
       </h1>
@@ -46,7 +50,7 @@ const Projects = () => {
           <div className="w-[30%]">
 
             <h1 className=" text-[45px] max-sm:text-[30px] flex flex-col text-[black]" >
-              <span className="text-[blue] flex flex-col max-sm:flex-row max-sm:gap-3 font-nueubig">
+              <span className="text-[#5A00CF] flex flex-col max-sm:flex-row max-sm:gap-3 font-nueubig">
                 <span className="">
                   
                 Create
@@ -64,19 +68,19 @@ const Projects = () => {
             </h1>
            
           </div>
-          <div className=" z-10 w-full flex p box-border justify-between max-sm:flex-col">
+          <div className=" z-10 w-full flex p box-border gap-10 justify-between max-sm:flex-col">
             <div className="w-[30%] max-sm:w-full">
               <p className="text-[black] font-nueuthin">Network with thousands of Africans in the diaspora through our Find Buddy page, starting with your city.</p>
               <button className="text-[black] rounded-md px-5 py-3 my-5 text-bold border-[1px] border-[black] z-10">Get the app</button>
             </div>
-            <div className="w-[60%] flex gap-5 flex-col max-sm:w-full box-border">
+            <div className="w-[70%] flex gap-5 flex-col max-sm:w-full box-border">
 
               <div className="max-sm:translate-x-7 flex box-border gap-5 max-sm:flex-col w-full">
-              <Image src={img9} className=" w-[calc(100%/2.3)] max-sm:w-full bottom-0 left-0 " priority      loading="eager" />
-              <Image src={img10} className=" w-[calc(100%/2.3)] max-sm:w-full bottom-0 left-0 " priority      loading="eager" />
+              <Image src={img9} className=" w-[calc(100%/2.2)] max-sm:w-full bottom-0 left-0 " priority      loading="eager" />
+              <Image src={img10} className=" w-[calc(100%/2.2)] max-sm:w-full bottom-0 left-0 " priority      loading="eager" />
             </div>
               <div className="flex w-full box-border gap-5 max-sm:hidden">
-              <Image src={img11} className=" w-[calc(100%/2.3)] bottom-0 left-0 " priority      loading="eager" />
+              <Image src={img11} className=" w-[calc(100%/2.2)] bottom-0 left-0 " priority      loading="eager" />
               <Image src={img12} className=" w-[calc(100%/2.2)] bottom-0 left-0 " priority      loading="eager" />
             </div>
             

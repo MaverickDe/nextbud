@@ -1,9 +1,9 @@
-import logo from "@/public/images/logo/logo4.svg";
+import logo from "@/public/images/logo/logo5.svg";
 import house from "@/public/images/images/house.svg";
 import person from "@/public/images/images/person.svg";
 import wallet from "@/public/images/images/wallet.svg";
 import c_up from "@/public/images/images/c_up.svg";
-import c_down from "@/public/images/images/c_up.svg";
+import c_down from "@/public/images/images/c_down.svg";
 import copy from "@/public/images/images/copy.svg";
 import Image from "next/image";
 import SelectMenu from "@/components/Layout/UIcomponent/selectMenu";
@@ -35,7 +35,7 @@ let [selectItem,setselectItem]= useState("")
               priority
               loading="eager"
                     />
-                    <p>Influencers</p>
+                    {/* <p>Influencers</p> */}
                 </div>
                 <button className="  font-nueuthin flex gap-3 justify-center items-center px-5 rounded-full bg-[#2F2F2F] h-[40px] overflow-clip">
                 <Image

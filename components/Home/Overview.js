@@ -16,7 +16,7 @@ import img23 from "../../public/images/images/img23.svg";
 const Overview = () => {
   return (
     <section id="aboutus" className="relative w-full flex max-md:flex-col-reverse justify-center items-center gap-[10px] my-5 p-5 py-20 shadow-md bg-[black] rounded-[30px] ">
-      <div className="w-[50%] max-md:w-full overflow-clip">
+      <div className="w-full max-md:w-full overflow-clip">
 
       <Image src={img2} className="w-full max-md:scale-[1.3]" priority      loading="eager" />
       </div>
@@ -41,7 +41,7 @@ Founded in 2024, NextBud was born out of a passion for bringing people together 
  
  
         </div>
-        <div className="flex w-fit gap-10 max-md:flex-col max-md:gap-5 justify-center items-center ">
+        <div className="flex md:self-start w-fit gap-10 max-md:flex-col max-md:gap-5 justify-center items-center ">
           <Image src={goggle} className="w-[150px] max-md:w-[150px]" priority      loading="eager" />
 
           <Image src={apple} className="w-[150px] max-md:w-[150px]" priority      loading="eager" />
