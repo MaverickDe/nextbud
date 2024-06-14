@@ -45,7 +45,7 @@ const Projects = () => {
         </span>
        
       </h1>
-        <div className="w p-5 relative box-border  overflow-hidden   rounded-[30px] bg-[linear-gradient(-45deg,#9864F1,#EFE6F7,#9864F1),linear-gradient(60deg,#EFE6F7,#9864F1)] max-sm:bg-[linear-gradient(45deg,#EFE6F7,#9864F1),linear-gradient(60deg,#EFE6F7,#9864F1)] w-full ">
+        <div className="w p-10 relative box-border rounded-[80px] max-md:rounded-[40px]  overflow-hidden    bg-[linear-gradient(-45deg,#9864F1,#EFE6F7,#9864F1),linear-gradient(60deg,#EFE6F7,#9864F1)] max-sm:bg-[linear-gradient(45deg,#EFE6F7,#9864F1),linear-gradient(60deg,#EFE6F7,#9864F1)] w-full ">
     <Image src={img5} className="z-5 absolute  bottom-0 left-0 " priority      loading="eager" />
           <div className="w-[30%]">
 
@@ -76,12 +76,12 @@ const Projects = () => {
             <div className="w-[70%] flex gap-5 flex-col max-sm:w-full box-border">
 
               <div className="max-sm:translate-x-7 flex box-border gap-5 max-sm:flex-col w-full">
-              <Image src={img9} className=" w-[calc(100%/2.2)] max-sm:w-full bottom-0 left-0 " priority      loading="eager" />
-              <Image src={img10} className=" w-[calc(100%/2.2)] max-sm:w-full bottom-0 left-0 " priority      loading="eager" />
+              <Image src={img9} className=" w-full max-sm:w-full bottom-0 left-0 " priority      loading="eager" />
+              <Image src={img10} className=" w-full max-sm:w-full bottom-0 left-0 " priority      loading="eager" />
             </div>
               <div className="flex w-full box-border gap-5 max-sm:hidden">
-              <Image src={img11} className=" w-[calc(100%/2.2)] bottom-0 left-0 " priority      loading="eager" />
-              <Image src={img12} className=" w-[calc(100%/2.2)] bottom-0 left-0 " priority      loading="eager" />
+              <Image src={img11} className=" w-full bottom-0 left-0 " priority      loading="eager" />
+              <Image src={img12} className=" w-full bottom-0 left-0 " priority      loading="eager" />
             </div>
             
 
@@ -98,32 +98,34 @@ const Projects = () => {
    
         
           
-        <div className=" p-5 relative box-border  overflow-hidden  flex flex-col items-center justify-center  rounded-[30px] bg-[#E0F7FF] w-full max-sm:w-full ">
+        <div className=" py-10 px-[60px] relative box-border  overflow-hidden  flex flex-col items-center justify-center  rounded-[80px] max-md:rounded-[40px] bg-[#E0F7FF] w-full max-sm:w-full ">
 
-            <h1 className="text-[#036181] self-start font-bold text-[2rem] nueubold">Buddy Room</h1>
-            <p className="text-[black] self-start font-nueuthin">Join or host a variety of events, plan group trip and activities on Buddy room 
+            <h1 className="text-[#036181] px-5 self-start font-bold text-[2rem] nueubold">Buddy Room</h1>
+            <p className="text-[black] px-5 self-start font-nueuthin ">Join or host a variety of events, plan group trip and activities on Buddy room 
 </p>
-            <Image src={img6} className=" w-[80%] z-10 " priority      loading="eager" />
+            <Image src={img6} className="w-[100%] z-10 " priority      loading="eager" />
         
     <Image src={img14} className="z-1 absolute  bottom-0 left-0 " priority      loading="eager" />
         
           
     </div>
-        <div className=" p-5 relative box-border  overflow-hidden  flex flex-col items-center justify-center  rounded-[30px] bg-[#E8CBD9] w-full max-sm:w-full ">
+        <div className=" py-10  relative box-border  overflow-hidden  flex flex-col items-center justify-center  rounded-[80px] max-md:rounded-[40px] bg-[#E8CBD9] w-full max-sm:w-full ">
 
-            <Image src={img13} className=" w-[80%] " priority      loading="eager" />
+            <Image src={img13} className=" w-[100%] relative right-[-60px]" priority      loading="eager" />
+        <div className="  px-[60px] relative box-border  overflow-hidden  flex flex-col items-center justify-center  rounded-[80px] max-md:rounded-[40px] bg-[#E8CBD9] w-full max-sm:w-full ">
             <h1 className="text-[#B20462] self-start font-bold text-[2rem] z-10 nueubold">Mart</h1>
             <p className="text-[black] font-nueuthin self-start z-10">
 Support African businesses and services in the diaspora through our marketplace</p>
         
-    <Image src={img15} className="z-1 absolute  bottom-0 right-0 " priority      loading="eager" />
         
           
+    </div>
+    <Image src={img15} className="z-1 absolute  bottom-0 right-0 " priority      loading="eager" />
     </div>
         </div>
         
               
-        <div className=" p-5 relative box-border  overflow-hidden  max-sm:flex-col-reverse justify-between  rounded-[30px] bg-[linear-gradient(45deg,#10B904,#EEFAED_70%),linear-gradient(60deg,#EFE6F7,#9864F1)] w-full flex gap-5 ">
+        <div className=" p-5 relative box-border  overflow-hidden  max-sm:flex-col-reverse justify-between  rounded-[80px] max-md:rounded-[40px] bg-[linear-gradient(45deg,#10B904,#EEFAED_70%),linear-gradient(60deg,#EFE6F7,#9864F1)] w-full flex gap-5 ">
     <Image src={img16} className="z-1 absolute  bottom-0 right-0 " priority      loading="eager" />
     <div className=" z-10 w-[50%] h-[500px]  max-sm:w-full flex p box-border justify-between  gap-5">
       
@@ -146,7 +148,7 @@ Support African businesses and services in the diaspora through our marketplace<
           </div>
 
           </div>
-          <div className="w-[30%] max-sm:w-full">
+          <div className="w-[35%] max-sm:w-full flex flex-col justify-center">
 
             <h1 className=" text-[45px] max-sm:text-[30px] flex flex-col text-[black]" >
               <span className="text-[#0FBA01]  ">
