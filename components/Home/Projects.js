@@ -101,7 +101,7 @@ const Projects = () => {
         <div className=" py-10 px-[60px] relative box-border  overflow-hidden  flex flex-col items-center justify-center  rounded-[80px] max-md:rounded-[40px] bg-[#E0F7FF] w-full max-sm:w-full ">
 
             <h1 className="text-[#036181] px-5 self-start font-bold text-[2rem] nueubold">Buddy Room</h1>
-            <p className="text-[black] px-5 self-start font-nueuthin ">Join or host a variety of events, plan group trip and activities on Buddy room 
+            <p className="text-[black] px-5 self-start font-nueuthin pt-5 pb-3 ">Join or host a variety of events, plan group trip and activities on Buddy room 
 </p>
             <Image src={img6} className="w-[100%] z-10 " priority      loading="eager" />
         
@@ -113,8 +113,8 @@ const Projects = () => {
 
             <Image src={img13} className=" w-[100%] relative right-[-60px]" priority      loading="eager" />
         <div className="  px-[60px] relative box-border  overflow-hidden  flex flex-col items-center justify-center  rounded-[80px] max-md:rounded-[40px] bg-[#E8CBD9] w-full max-sm:w-full ">
-            <h1 className="text-[#B20462] self-start font-bold text-[2rem] z-10 nueubold">Mart</h1>
-            <p className="text-[black] font-nueuthin self-start z-10">
+            <h1 className="text-[#B20462] self-start font-bold text-[2rem] z-10 nueubold pt-3">Mart</h1>
+            <p className="text-[black] font-nueuthin self-start z-10 pt-5 pb-3">
 Support African businesses and services in the diaspora through our marketplace</p>
         
         
