@@ -14,7 +14,7 @@ import Marquee from "../Layout/flagmarque";
 const Footer = () => {
   return (
     <section className="w-full p-5  ">
-    <section className="w-full flex flex-wrap gap-5  justify-between sm:items-center  max-sm:flex-col">
+    <section className="w-full flex flex-wrap gap-5 py-7 md:px-5  justify-between sm:items-center  max-sm:flex-col">
           
       <Link
             className="flex  gap-[10px] max-sm:mb-5 "
@@ -23,7 +23,7 @@ const Footer = () => {
             <Image
               alt="image"
               src={logo}
-              className=" w-[120px]"
+              className=" w-[150px]"
               priority
               loading="eager"
             />
