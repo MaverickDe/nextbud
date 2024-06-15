@@ -12,7 +12,7 @@ export default function Tos() {
             <h2 className="text-[30px] max-md:text-[20px]">App NextBud</h2>
           </div>
 
-          <div className="w-[80%] max-sm:w-[90%] bg-[white] m-5 flex flex-col mb-20 gap-10  py-10 px-10 max-sm:px-5 rounded-[40px] max-w-[1500px] rounded-lg font-nueuthin">
+          <div className="w-[80%] max-sm:w-[95%] bg-[white] m-5 flex flex-col mb-20 gap-10  py-10 px-10  rounded-[40px] max-w-[1500px] rounded-lg font-nueuthin">
             <div className="flex flex-col gap-5">
               <p>
               These Terms of Service govern your use of NextBud, our website located at

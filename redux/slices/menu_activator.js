@@ -13,10 +13,10 @@ const initialState = {
     reducers: {
         setmenu1: (state, action) => {
            
-            state.menu1 = !state.menu1
+        state.menu1 = action.payload
       },
         setmenu2: (state, action) => {
-            state.menu2 = !state.menu2
+            state.menu2 = action.payload
         
            
            

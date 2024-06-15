@@ -101,6 +101,9 @@ const Nav = () => {
           <Link
             className="flex justify-center items-center gap-[10px]"
             href="/"
+            onClick={() => {
+              UseAppDispatch(setmenu1(false));
+            }}
           >
             <Image
               alt="image"
@@ -137,7 +140,7 @@ const Nav = () => {
         </div>
         <div
           onClick={() => {
-            UseAppDispatch(setmenu1());
+            UseAppDispatch(setmenu1(false));
           }}
           className={`  ${
             menu1 ? "max-md:menu_active" : "max-md:menu_con"
@@ -159,7 +162,10 @@ const Nav = () => {
                 return (
                   <Link
                     className="w-fit"
-                    onClick={() => {}}
+                    onClick={() => {
+
+                      UseAppDispatch(setmenu1(false));
+                    }}
                     key={index}
                     href={e.link}
                   >
@@ -177,7 +183,7 @@ const Nav = () => {
         
               <Link
                 onClick={() => {
-                  UseAppDispatch(setmenu1());
+                  UseAppDispatch(setmenu1(false));
                 }}
                 className="w-full md:w-fit bg-[black] text-[white] rounded-md px-10 py-1.5 flex justify-center items-center"
                 href={"/signup"}
@@ -191,7 +197,7 @@ const Nav = () => {
         <div
           className="menu visible md:hidden  w-[20px]"
           onClick={() => {
-            UseAppDispatch(setmenu1());
+            UseAppDispatch(setmenu1(!menu1));
             // let open = +menuref.current.dataset.open
             // console.log(open ,)
             // open ? open = 0 :open =1

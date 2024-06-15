@@ -5,14 +5,14 @@ export default function Privacy() {
   return (
     <div className="w-full">
       <RootLayout3>
-        <div className="w-full flex bg-[#F5EFFB] items-center justify-center px-5 py-5 max-sm:px-3 flex-col">
+        <div className="w-full flex bg-[#F5EFFB] items-center justify-center px-5 py-5 max-sm:px-1 flex-col">
           {/* <div className="w-full flex items-center justify-center p-5"> */}
           <div className="p-10 flex-col flex justify-center items-center">
             <h1 className="text-[50px] max-md:text-[30px]">Privacy Policy</h1>
             <h2 className="text-[30px] max-md:text-[20px]">App NextBud</h2>
           </div>
 
-          <div className="w-[80%] max-sm:w-[90%] bg-[white] m-5 mb-20 flex flex-col gap-10  py-10 px-10 max-sm:px-5 rounded-[40px] max-w-[1500px] rounded-lg font-nueuthin">
+          <div className="w-[80%] max-sm:w-[95%] bg-[white] my-5 mb-20 flex flex-col gap-10  py-10 px-10  rounded-[40px] max-w-[1500px] rounded-lg font-nueuthin">
             <div className="flex flex-col gap-5">
               <p>
                 Your privacy is important to us. It is NextBud's policy to
@@ -306,7 +306,7 @@ export default function Privacy() {
                 Your Rights and Controlling Your Personal Information
               </h1>
               <div className="flex flex-col gap-5">
-                <ul className="list-disc	">
+                <ul className="	">
                   {[
                     {
                       heah: "Your choice: ",
@@ -465,7 +465,7 @@ Where the disclosure of your personal information is solely subject to Australia
                 grounds:
               </p>
               <div className="flex flex-col gap-5">
-                <ul className="list-disc	">
+                <ul className="	">
                   {[
                     {
                       heah: "Consent From You",
@@ -488,8 +488,9 @@ Where the disclosure of your personal information is solely subject to Australia
                     },
                   ].map((e, index) => {
                     return (
-                      <li className=" " key={index}>
-                        <b>{` ${e.heah} `}</b>
+                      <li className="pt-5 " key={index}>
+                        <b className="pb-3 ">{` ${e.heah} `}</b>
+                        <br />
                         {e.prg}
                       </li>
                     );
@@ -648,7 +649,7 @@ To receive this information, send us a request using the contact details provide
                 (UK GDPR) Compliance (UK)
               </h1>
               <div className="flex flex-col gap-5">
-                <ul className="list-disc	 gap-5 flex flex-col">
+                <ul className="	 gap-5 flex flex-col">
                   {[
                     {
                       heah: "Data Controller / Data Processor",
@@ -738,7 +739,7 @@ To receive this information, send us a request using the contact details provide
                 Your Rights and Controlling Your Personal Information
               </h1>
               <div className="flex flex-col gap-5">
-                <ul className="list-disc	 flex flex-col gap-5">
+                <ul className="	 flex flex-col gap-5">
                   {[
                     {
                       heah: "Right to Restrict Processing:",
