@@ -30,14 +30,14 @@ const Footer = () => {
             />
         
               </Link>
-              {/* <div >
+              <div >
                   <p className="text-[#656565]">Legal</p>
                   <div className="font-nueuthin flex flex-wrap gap-5">
                      <Link href="/privacy">Privacy Policy</Link>
                      <Link href="/tos">Terms of Service</Link>
                      <Link href="/acceptibilitypol">Acceptable use policy</Link>
                   </div>
-              </div> */}
+              </div>
           <div className="flex gap-20 max-sm:w-full max-sm:justify-between flex-wrap">
               <div>
                   <p className="text-[#656565] mb-5">Contact us</p>
