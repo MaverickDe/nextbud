@@ -37,7 +37,7 @@ const Footer = () => {
                      <Link href="/acceptibilitypol">Acceptable use policy</Link>
                   </div>
               </div>
-          <div className="flex gap-5 max-sm:w-full max-sm:justify-between flex-wrap">
+          <div className="flex gap-20 max-sm:w-full max-sm:justify-between flex-wrap">
               <div>
                   <p className="text-[#656565] mb-5">Contact us</p>
                   <p className="font-nueuthin">Support@nextbud.com</p>
