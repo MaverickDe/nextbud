@@ -22,7 +22,7 @@ const Overview = () => {
       </div>
       {/* <Image src={img8} className="w-[30px] absolute top-[30px] right-[40px]" priority      loading="eager" /> */}
               <Image src={img8} className="w-[70px] max-md:w-[50px] absolute top-[40px] right-[50px]" priority      loading="eager" />
-      <div className="w-full max-w-[480px] text-[white] gap-5 flex flex-col justify-center items-center gap-[10px]    max-w-[1300px] " >
+      <div className="w-full md:max-w-[480px] text-[white] gap-5 flex flex-col justify-center items-center gap-[10px]    max-w-[1300px] " >
         <h1 className="font-bold text-[3rem] md:text-[4rem]  relative  self-start">About Us
         <Image src={img23} className="w-[100px] absolute left-[70%] top-[40px]" priority      loading="eager" />
 
