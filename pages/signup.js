@@ -15,7 +15,7 @@ import  Input  from "@/components/Layout/UIcomponent/input.js"
 import CustomInput from "@/components/Layout/UIcomponent/input.js"
 import Link from "next/link"
 export default function Signup() {
-    return <div className="w-full h-[100vh] relative flex flex-col">
+    return <div className="w-full h-[100vh] relative flex flex-col ">
         
        <RootLayout3>
  <div  className="w-full flex-col flex-1 md:overflow-y-auto flex justify-center  items-center	">
@@ -42,7 +42,7 @@ phone5
                 <div className="flex flex-col w-full max-w-[500px] px-5 gap-10 lg:mb-auto">
                     <div>
 
-               <h1>Let’s Get Started!</h1>
+               <h1 className="text-[30px]">Let’s Get Started!</h1>
                 <p className="font-nueuthin">Join us as we embark on a journey of connection, empowerment, and celebration</p>
                     </div>
                     <div className="flex flex-col w-full   gap-5">
@@ -86,7 +86,7 @@ phone5
     </Button>
                     </div>
                     <div >
-                            <p className=" text-[12px] mb-5  font-nueuthin">
+                            <p className=" text-[12px] mb-3  font-nueuthin">
                                 <span>
 
                                     {"By selecting "}
