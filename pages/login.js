@@ -88,7 +88,7 @@ phone5
                         <p>Forget Password?</p>
                         <p className=" flex gap-5  items-center">
                             <span className="font-nueuthin">
-                            Not a buddy yet?
+                            Want to become an Influencer?
                             </span>
                             <Link href="/signup" className="text-transparent bg-clip-text bg-[linear-gradient(-45deg,#6067FA,#9864F1)]">
                             Sign Up

@@ -31,7 +31,7 @@ let [selectItem,setselectItem]= useState("")
                 <Image
               alt="image"
               src={logo}
-              className=" w-[170px"
+              className=" w-[170px]"
               priority
               loading="eager"
                     />

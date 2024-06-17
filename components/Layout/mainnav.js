@@ -95,7 +95,7 @@ const Nav = () => {
   // }, [])
   return (
     <section className="w-full fixed top-[0px]   left-[0px]  z-30 box-border">
-      <section className="w-full bg-[rgba(255,255,255,0.9)] backdrop-blur-sm  box-b relative text-[black] min-h-[40px] box-border flex  justify-between items-center px-5 py-5">
+      <section className="w-full px-20 bg-[rgba(255,255,255,0.9)] backdrop-blur-sm  box-b relative text-[black] min-h-[40px] box-border flex  justify-between items-center  py-5">
         <div className="flex justify-center items-center gap-[10px]">
           <Link
             className="flex justify-center items-center gap-[10px]"
@@ -141,7 +141,7 @@ const Nav = () => {
                 onClick={() => {
                   UseAppDispatch(setmenu1(false));
                 }}
-                className="w-full md:w-fit bg-[black] text-[white] rounded-md px-10 py-3 flex justify-center items-center"
+                className="w-full md:w-fit bg-[black] text-[white] rounded-lg px-10 py-3 flex justify-center items-center"
                 href={"/signup"}
               >
                Become an Influencer

@@ -99,11 +99,11 @@ phone5
                                {"I agree to Nextbud’s "} 
                                
                                 <Link href="/tos" className="text-transparent bg-clip-text bg-[linear-gradient(-45deg,#6067FA,#9864F1)]">
-                               {" Terms of Service"}
+                               {" Terms of condition"}
                            
                                 </Link>{", "}
-                                <Link href="/tos" className="text-transparent bg-clip-text bg-[linear-gradient(-45deg,#6067FA,#9864F1)]">
-                           {"Payment Terms of Service "}
+                                <Link href="/acceptibilitypol" className="text-transparent bg-clip-text bg-[linear-gradient(-45deg,#6067FA,#9864F1)]">
+                           {"Acceptable use policy "}
                                 
                                 </Link>
                                
@@ -111,16 +111,11 @@ phone5
                                 
                                
                                 <Link href="/privacy" className="text-transparent bg-clip-text bg-[linear-gradient(-45deg,#6067FA,#9864F1)]">
-                           {"Nondiscrimination Policy "}
+                           {"Privacy Policy "}
                                 
                             </Link>
 
-                                and acknowledge the
-
-                                <Link href="/privacy" className="text-transparent bg-clip-text bg-[linear-gradient(-45deg,#6067FA,#9864F1)]">
-                           {" Privacy Policy "}
-                                
-                            </Link>
+                              
                                 
                                 
                                 .</p>
