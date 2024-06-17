@@ -156,7 +156,8 @@ let [selectItem,setselectItem]= useState("")
                     },
                     {head:"Total Invited USers",
                     number:"128",
-                            arrowicon: c_down,
+                        arrowicon: c_down,
+                            down:true,
                     percent:"+2.5%",
                     time:"than yesterday"
                     },]
@@ -168,7 +169,7 @@ let [selectItem,setselectItem]= useState("")
 
                                     {ee.map((e,index) => {
                                         
-                                        return <div key={index} className="p-5 flex flex-col w-full  h-[170px] rounded-md bg-[white] justify-between">
+                                        return <div key={index} className="p-5 flex flex-col w-full  h-[170px] rounded-[40px] bg-[white] justify-between">
                                         <p>{e.head}</p>
                                         <h1 className="font-nueubig text-[30px]">{e.number}</h1>
                                             <div className="font-nueuthin flex w-full justify-between items-center">
@@ -180,10 +181,10 @@ let [selectItem,setselectItem]= useState("")
                       priority
                       loading="eager"
                                     />
-                                                    <span>{ e.percent}</span>
+                                                    <span className={`${e.down?"text-[red]":"text-[green]"}`}>{ e.percent}</span>
         
                                                 </div>
-                                                <p>{e.time }</p>
+                                                <p className="text-[#F6F6F6]" >{e.time }</p>
                                             </div>
         
                                         </div>
