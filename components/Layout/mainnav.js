@@ -94,7 +94,7 @@ const Nav = () => {
   //   v3()
   // }, [])
   return (
-    <section className="w-full fixed top-[0px]   left-[0px]  z-30 box-border">
+    <section className="w-full absolute top-[0px]   left-[0px]  z-30 box-border">
       <section className="w-full px-20 bg-[rgba(255,255,255,0.9)] backdrop-blur-sm  box-b relative text-[black] min-h-[40px] box-border flex  justify-between items-center  py-5">
         <div className="flex justify-center items-center gap-[10px]">
           <Link
@@ -107,7 +107,7 @@ const Nav = () => {
             <Image
               alt="image"
               src={logo}
-              className=" w-[150px]"
+              className=" w-[200px] max-md:w-[150px]"
               priority
               loading="eager"
             />

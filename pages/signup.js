@@ -1,6 +1,6 @@
 import Fade from "@/components/Layout/slick/fade"
 import RootLayout from "@/components/Layout/wrapper/layout1"
-import RootLayout3 from "@/components/Layout/wrapper/layout3"
+import RootLayout3 from "@/components/Layout/wrapper/layout2"
 import phone1 from "@/public/images/images/phoneslide/phone1.svg"
 import phone2 from "@/public/images/images/phoneslide/phone2.svg"
 import phone3 from "@/public/images/images/phoneslide/phone3.svg"

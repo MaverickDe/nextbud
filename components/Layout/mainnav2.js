@@ -108,7 +108,7 @@ const Nav = () => {
             <Image
               alt="image"
               src={logo}
-              className=" w-[120px]"
+              className="w-[200px] max-md:w-[150px]"
               priority
               loading="eager"
             />

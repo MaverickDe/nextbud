@@ -23,8 +23,7 @@ const Footer = () => {
             <Image
               alt="image"
               src={logo}
-              className=" w-[150px]"
-              priority
+              className=" w-[200px] max-md:w-[150px]"
               loading="eager"
             />
         

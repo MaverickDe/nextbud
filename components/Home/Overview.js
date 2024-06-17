@@ -15,14 +15,14 @@ import img23 from "../../public/images/images/img23.svg";
 
 const Overview = () => {
   return (
-    <section id="aboutus" className="relative w-full flex max-md:flex-col-reverse justify-center items-center gap-[10px] my-5 p-5 py-10 shadow-md bg-[black] rounded-[80px] max-md:rounded-[60px] ">
+    <section id="aboutus" className="relative w-full flex max-md:flex-col-reverse justify-center items-center gap-[10px] my-5 px-5 md:px-20 py-10 shadow-md bg-[black] rounded-[80px] max-md:rounded-[60px] ">
       <div className="w-full max-md:w-full overflow-clip">
 
       <Image src={img2} className="w-full max-md:scale-[1.3]" priority      loading="eager" />
       </div>
       {/* <Image src={img8} className="w-[30px] absolute top-[30px] right-[40px]" priority      loading="eager" /> */}
               <Image src={img8} className="w-[70px] max-md:w-[50px] absolute top-[40px] right-[50px]" priority      loading="eager" />
-      <div className="w-full  text-[white] gap-5 flex flex-col justify-center items-center gap-[10px]    max-w-[1300px] " >
+      <div className="w-full max-w-[480px] text-[white] gap-5 flex flex-col justify-center items-center gap-[10px]    max-w-[1300px] " >
         <h1 className="font-bold text-[3rem] md:text-[4rem]  relative  self-start">About Us
         <Image src={img23} className="w-[100px] absolute left-[70%] top-[40px]" priority      loading="eager" />
 

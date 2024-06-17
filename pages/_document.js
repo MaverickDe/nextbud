@@ -18,8 +18,9 @@ export default function Document() {
 
  
    
-      <body className='text-secondary dark:text-secondary2 bg-light1 dark:bg-dark1 w-[100vw] h-[100vh] overflow-y-scroll relative flex flex-col items-center'>
-      <div className=' w-full   max-w-[3000px]  '>
+      <body className='text-secondary dark:text-secondary2  w-[100vw] h-[100vh]   flex flex-col items-center'>
+      <div className=' w-full   max-w-[1430px]  h-full relative '>
+      <div className=' w-full     h-full overflow-y-scroll '>
 
     
     
@@ -30,6 +31,7 @@ export default function Document() {
         <Main />
         <NextScript />
         <div id="navigation"></div>
+      </div>
       </div>
       </body>
     </Html>

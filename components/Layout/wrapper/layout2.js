@@ -10,13 +10,13 @@ const RootLayout2 = ({ children }) => {
     
     <div className="flex  items-center gap-[10px]">
           <Link
-            className="flex  items-center gap-[10px]"
+            className="flex  items-center gap-[10px] p-5"
             href="/"
           >
             <Image
               alt="image"
               src={logo}
-              className=" w-[170px] p-5"
+              className="w-[200px] max-md:w-[150px]"
               priority
               loading="eager"
             />
