@@ -1,6 +1,6 @@
 import Fade from "@/components/Layout/slick/fade"
 import RootLayout from "@/components/Layout/wrapper/layout1"
-import RootLayout2 from "@/components/Layout/wrapper/layout2"
+import RootLayout4 from "@/components/Layout/wrapper/layout4"
 import phone1 from "@/public/images/images/phoneslide/phone1.svg"
 import phone2 from "@/public/images/images/phoneslide/phone2.svg"
 import phone3 from "@/public/images/images/phoneslide/phone3.svg"
@@ -17,7 +17,7 @@ import Link from "next/link"
 export default function Login() {
     return <div className="w-full h-[100vh] relative flex flex-col">
         
-       <RootLayout2>
+       <RootLayout4>
  <div  className="w-full flex-col flex-1 md:overflow-y-auto flex justify-center  items-center	">
             <section className="w-full h-[100%] max-md:my-10    flex justify-center  items-center ">
 
@@ -101,6 +101,6 @@ phone5
             </section>
 
     </div>
-        </RootLayout2>
+        </RootLayout4>
     </div>
 }

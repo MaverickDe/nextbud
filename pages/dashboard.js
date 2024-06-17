@@ -21,9 +21,9 @@ export default function Dashboard() {
 let [selectItem,setselectItem]= useState("")
 
 
-    return <div className="w-full">
-        <div className="bg-[black] ">
-            <div className="text-[white] p-5 flex justify-between items-center mb-[50px] max-md:flex-col max-md:gap-5">
+    return <div className="w-full bg-[blue] ">
+        <div className="bg-[black] w-full block pt-[100px] max-md:pt-[150px] ">
+            <div className="text-[white] p-5 fixed left-0 px-10 top-0 rounded-b-[100px]   max-md:rounded-b-[50px] bg-[black]  flex justify-between items-center mb-[50px] max-md:flex-col max-md:gap-5 w-full">
                 <div className="flex gap-20 justify-center items-center ">
 
 
@@ -97,12 +97,12 @@ let [selectItem,setselectItem]= useState("")
 </div>
                 
             </div>
-            <div className="rounded-t-[100px] max-md:rounded-t-[50px] flex flex-col gap-5 bg-[white] h-[500px] font-nueuthin px-5 py-[100px]">
+            <div className="rounded-t-[100px]  max-md:rounded-t-[50px]   flex-col gap-5 bg-[white] min-h-[500px]  font-nueuthin px-10 py-[100px]">
                 <div>
 
-                <p>Welcome Grace!</p>
+                <p className="mb-20">Welcome Grace!</p>
                 </div>
-                <div className="w-full flex justify-between">
+                <div className="w-full flex justify-between mb-10">
                     <div>
                     <p>Total Balance</p>
                 <h1 className="font-nueubig text-[30px] max-sm:text-[23px]">&#x24;$800.99
@@ -204,7 +204,7 @@ let [selectItem,setselectItem]= useState("")
 
 
                     <div className="my-10">
-                        <p>Your unique referal code</p>
+                        <p className="mb-3">Your unique referal code</p>
                         <button className="bg-[#8CE1FF] flex gap-3 px-3 h-[45px] rounded-full text-[black] items-center justify-center">
                         <span className="text-[25px]">GRACE012</span>
                         <Image
@@ -226,6 +226,8 @@ let [selectItem,setselectItem]= useState("")
                 </div>
 
             </div>
+            
+           
 
         </div>
 

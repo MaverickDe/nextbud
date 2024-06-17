@@ -1,5 +1,5 @@
 import Header from '../mainnav2';
-import Footer from '../Footer2';
+import Footer from '../Footer3';
 import Link from 'next/link';
 import Image from 'next/image';
 import logo from "@/public/images/logo/logo1.svg";

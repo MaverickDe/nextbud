@@ -13,7 +13,8 @@ import Marquee from "../Layout/flagmarque";
 
 const Footer = () => {
   return (
-    <section className="w-full p-5  ">
+      <section className="w-full p-5  ">
+            <Marquee/>
     <section className="w-full flex flex-wrap gap-5  justify-between sm:items-center  max-sm:flex-col">
           
       <Link
@@ -29,14 +30,14 @@ const Footer = () => {
             />
         
               </Link>
-              <div >
+              {/* <div >
                   <p className="text-[#656565]">Legal</p>
                   <div className="font-nueuthin flex flex-wrap gap-5">
                      <Link href="/privacy">Privacy Policy</Link>
                      <Link href="/tos">Terms of Service</Link>
                      <Link href="/acceptibilitypol">Acceptable use policy</Link>
                   </div>
-              </div>
+              </div> */}
           <div className="flex gap-20 max-sm:w-full max-sm:justify-between flex-wrap">
               <div>
                   <p className="text-[#656565] mb-5">Contact us</p>
@@ -55,7 +56,7 @@ const Footer = () => {
               </div>
      </div>
           </section>
-          <Marquee/>
+        
     </section>
   );
 };

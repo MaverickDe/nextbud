@@ -185,10 +185,10 @@ const Nav = () => {
                 onClick={() => {
                   UseAppDispatch(setmenu1(false));
                 }}
-                className="w-full md:w-fit bg-[black] text-[white] rounded-md px-10 py-1.5 flex justify-center items-center"
+                className="w-full md:w-fit bg-[black] text-[white] rounded-md px-10 py-3 flex justify-center items-center"
                 href={"/signup"}
               >
-               Get Started
+               Become an Influencer
               </Link>
           
             </div>
