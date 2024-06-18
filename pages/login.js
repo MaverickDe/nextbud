@@ -47,16 +47,16 @@ phone5
                     </div>
                     <div className="flex flex-col w-full   gap-5">
                       
-                        <CustomInput  className="bg-[#F6F6F6] font-nueuthin focus-within:border-[#F6F6F6]" placeholder="Email Address" type="email" />
+                        <CustomInput  className="bg-[#F6F6F6] rounded-[12px] mb-[4px] font-nueuthin focus-within:border-[#F6F6F6]" placeholder="Email Address" type="email" />
                         {/* <CustomInput type ="input" className="bg-[#F6F6F6] font-nueuthin focus-within:border-[#F6F6F6]" placeholder="Password" /> */}
-                    <InputPassword   className="bg-[#F6F6F6] font-nueuthin focus-within:border-[#F6F6F6]"  placeholder="Password" />
+                    <InputPassword   className="bg-[#F6F6F6] rounded-[12px] font-nueuthin focus-within:border-[#F6F6F6]"  placeholder="Password" />
                         
                         {/* <Input type={ "email"} placeholder="email" /> */}
                     
                         <Button
                             isLoading={false}
                             variant="faded"
-                            className="bg-[#DDDDDD] text-[#878787] rounded-md w-full p-3"
+                            className="bg-[#DDDDDD] text-[#878787] rounded-md w-full p-3 h-[50px] mt-[20px]"
     
       spinner={
         <svg

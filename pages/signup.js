@@ -47,17 +47,17 @@ phone5
                     </div>
                     <div className="flex flex-col w-full   gap-5">
                       
-                        <CustomInput  className="bg-[#F6F6F6] font-nueuthin focus-within:border-[#F6F6F6]" placeholder="Full name" type="text" />
-                        <CustomInput  className="bg-[#F6F6F6] font-nueuthin focus-within:border-[#F6F6F6]" placeholder="Email Address" type="email" />
+                        <CustomInput  className="bg-[#F6F6F6] font-nueuthin focus-within:border-[#F6F6F6] rounded-[12px] mb-[4px]" placeholder="Full name" type="text" />
+                        <CustomInput  className="bg-[#F6F6F6] font-nueuthin focus-within:border-[#F6F6F6] rounded-[12px] mb-[4px]" placeholder="Email Address" type="email" />
                         {/* <CustomInput type ="input" className="bg-[#F6F6F6] font-nueuthin focus-within:border-[#F6F6F6]" placeholder="Password" /> */}
-                    <InputPassword   className="bg-[#F6F6F6] font-nueuthin focus-within:border-[#F6F6F6]"  placeholder="Password" />
+                    <InputPassword   className="bg-[#F6F6F6] font-nueuthin focus-within:border-[#F6F6F6] rounded-[12px] "  placeholder="Password" />
                         
                         {/* <Input type={ "email"} placeholder="email" /> */}
                     
                         <Button
                             isLoading={false}
                             variant="faded"
-                            className="bg-[#DDDDDD] text-[#878787] rounded-md w-full p-3"
+                            className="bg-[#DDDDDD] text-[#878787] rounded-[12px] w-full p-3 h-[50px] mt-[20px] "
     
       spinner={
         <svg
@@ -119,13 +119,12 @@ phone5
                                 
                                 
                                 .</p>
-                        <p className=" flex gap-5  items-center">
+                        <p className=" flex gap-[3px]  items-center">
                             <span className="font-nueuthin">
                             Already an Influencer?
                             </span>
                             <Link href="/login" className="text-transparent bg-clip-text bg-[linear-gradient(-45deg,#6067FA,#9864F1)]">
-                            Log in
-                            </Link>
+                                  Log in                          </Link>
 
                         </p>
                     </div>
