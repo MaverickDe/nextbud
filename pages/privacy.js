@@ -5,7 +5,7 @@ export default function Privacy() {
   return (
     <div className="w-full">
       <RootLayout3>
-        <div className="w-full flex bg-[#F5EFFB] items-center justify-center px-5 py-5 max-sm:px-1 flex-col">
+        <div className="w-full flex bg-[#F5EFFB] pt-[100px] items-center justify-center px-5 py-5 max-sm:px-1 flex-col">
           {/* <div className="w-full flex items-center justify-center p-5"> */}
           <div className="p-10 flex-col flex justify-center items-center">
             <h1 className="text-[50px] max-md:text-[30px]">Privacy Policy</h1>
