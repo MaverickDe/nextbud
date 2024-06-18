@@ -96,7 +96,7 @@ const Nav = () => {
   // }, [])
   return (
     <section className="w-full absolute top-[0px]   left-[0px]  z-30 box-border">
-      <section className="w-full bg-[rgba(255,255,255,0.9)] backdrop-blur-sm box-b relative text-[black] min-h-[40px] box-border flex  justify-between items-center max-md:px-5 px-20 py-3">
+      <section className="w-full bg-[rgba(255,255,255,0.9)] backdrop-blur-sm box-b relative text-[black] min-h-[40px] box-border flex  justify-between items-center max-md:px-5 px-20 max-md:px-10 py-3">
         <div className="flex justify-center items-center gap-[10px]">
           <Link
             className="flex justify-center items-center gap-[10px]"
