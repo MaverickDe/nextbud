@@ -41,8 +41,8 @@ export default function Dashboard() {
     let { currentUser, isLoggedin } = useAppSelector((state) => state.authUser);
   let { fullname, email, id, refCode } = useAppSelector((state) => state.user);
   useEffect(() => {
-    if (isLoggedin) {
-      // router.push("/dashboard")
+    if (!isLoggedin) {
+      router.push("/login")
     }
   }, [isLoggedin]);
   let [data, setdata] = useState({

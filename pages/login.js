@@ -43,7 +43,7 @@ export default function Login() {
 
   useEffect(() => {
     if (isLoggedin) {
-      // router.push("/dashboard")
+      router.push("/dashboard")
     }
   }, [isLoggedin]);
 
