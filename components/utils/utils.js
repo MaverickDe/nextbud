@@ -1,5 +1,5 @@
 
-
+import  crypto from "crypto";
 export let setErrorHelper = (message) => {
     let div = document.querySelector(".err")
     div.querySelector("div").textContent = message
@@ -144,3 +144,8 @@ export let getdate = (date) => {
 
 
 }
+
+export const randomId = (num = 20) => {
+    return crypto.randomBytes(num).toString("hex");
+  };
+  

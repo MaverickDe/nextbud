@@ -8,18 +8,13 @@ import phone4 from "@/public/images/images/phoneslide/phone4.svg";
 import phone5 from "@/public/images/images/phoneslide/phone5.svg";
 import logo3 from "@/public/images/logo/logo3.svg";
 import { Button } from "@nextui-org/react";
-// import { Button as bf } from "@mui/material"
+import { Button as bf } from "@mui/material";
 import Image from "next/image";
 import InputPassword from "@/components/Layout/UIcomponent/password.js";
 import Input from "@/components/Layout/UIcomponent/input.js";
 import CustomInput from "@/components/Layout/UIcomponent/input.js";
 import Link from "next/link";
-import {
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-  setPersistence,
-  browserSessionPersistence,
-} from "firebase/auth";
+import { getAuth, sendPasswordResetEmail } from "firebase/auth";
 
 import { useEffect, useState } from "react";
 import { useAppSelector, AppDispatch } from "@/redux/store/store";
@@ -29,6 +24,7 @@ import { addGeneral, readGeneral } from "@/firebase/firebase_func";
 import { setErrorHelper } from "@/components/utils/utils";
 import { setuser } from "@/redux/slices/user";
 import { setcurrentUser, setisLoggedin } from "@/redux/slices/auth";
+import { DOMAIN } from "@/components/const";
 export default function Login() {
   let UseAppDispatch = AppDispatch();
 
@@ -38,14 +34,13 @@ export default function Login() {
   let [loading, setLoading] = useState(false);
   let [data, setdata] = useState({
     email: "",
-    lastName: "",
   });
 
   useEffect(() => {
     if (isLoggedin) {
       // router.push("/dashboard")
     }
-  }, [isLoggedin]);
+  }, []);
 
   let setDatahelper = (key, val) => {
     let data_ = { ...data };
@@ -81,7 +76,7 @@ export default function Login() {
                   priority
                   loading="eager"
                 />
-                <p className="font-nueuthin">Client Portal</p>
+                <p className="font-nueuthin">Reset Password</p>
               </div>
               <div className="flex flex-col w-full text-[black]   gap-5">
                 <CustomInput
@@ -94,14 +89,6 @@ export default function Login() {
                   type="email"
                 />
                 {/* <CustomInput type ="input" className="bg-[#F6F6F6] font-nueuthin focus-within:border-[#F6F6F6]" placeholder="Password" /> */}
-                <InputPassword
-                  value={data.password}
-                  onChange={(value) => {
-                    setDatahelper("password", value);
-                  }}
-                  className="bg-[#F6F6F6] rounded-[12px] font-nueuthin focus-within:border-[#F6F6F6]"
-                  placeholder="Password"
-                />
 
                 {/* <Input type={ "email"} placeholder="email" /> */}
 
@@ -109,21 +96,20 @@ export default function Login() {
                   onClick={async () => {
                     try {
                       setLoading(true);
-                      console.log(data);
 
-                      let v = await signInWithEmailAndPassword(
-                        auth,
-                        data.email,
-                        data.password
-                      );
-
-                      let c = await readGeneral("profile", v.user.uid);
-                      UseAppDispatch(setuser(c));
-                      UseAppDispatch(setisLoggedin(true));
-
-                      UseAppDispatch(setcurrentUser(v.user));
-
-                      router.push("/dashboard");
+                      const auth = getAuth();
+                      sendPasswordResetEmail(auth, data.email, {
+                        url: DOMAIN + "/login",
+                      })
+                        .then(() => {
+                          // Password reset email sent!
+                          // ..
+                        })
+                        .catch((error) => {
+                          const errorCode = error.code;
+                          const errorMessage = error.message;
+                          // ..
+                        });
                     } catch (e) {
                       if (e.message) {
                         setErrorHelper(e.message);
@@ -164,11 +150,10 @@ export default function Login() {
                     </svg>
                   }
                 >
-                  Continue
+                  Send Email verfication link
                 </Button>
               </div>
               <div>
-                <p>Forget Password?</p>
                 <p className=" flex gap-5  items-center">
                   <span className="font-nueuthin">
                     Want to become an Influencer?

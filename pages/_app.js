@@ -17,22 +17,14 @@ import Script from "next/script";
 export default function App({ Component, pageProps }) {
   let [sideToast, setSideToast] = useState({ message: null, type: true });
 
-  
-
   let reducer = (state, action) => {
     let state_ = { ...state };
-    // console.log(action)
-    // action.forEach(e => {
 
     switch (action.type) {
-     
-    
     }
-    // })
 
     return state_;
   };
-  
 
   let setSideToastHelper = (message, type) => {
     let toast = { ...sideToast };
@@ -65,7 +57,7 @@ export default function App({ Component, pageProps }) {
         <meta property="og:url" content={DOMAIN} />
         <meta property="og:type" content="website" />
       </Head>
-      
+
       {sideToast.message && (
         <div
           className={`border-b-[1px] w-fit max-w-full rounded-md shadow-md min-h-[50px] px-[5px] bg-white flex items-center z-50  fixed top-[0px] right-[0px] ${
@@ -78,15 +70,13 @@ export default function App({ Component, pageProps }) {
         </div>
       )}
 
-      
-
       <div className="err  w-full min-h-[50px] text-red fixed top-[100px] flex justify-center items-center z-50  hidden">
         <div className="p-5 shadow-md min-w-[100px] dark:bg-dark2 bg-[white] rounded-md"></div>
       </div>
       <ReduxProvider>
         <ThemeProvider>
           <Contextapi1.Provider value={{ ...initdata, newdispatch: dispatch }}>
-          <ReduxProviderPage/>
+            <ReduxProviderPage />
             <Component
               {...{
                 ...pageProps,
@@ -105,24 +95,3 @@ export default function App({ Component, pageProps }) {
     </>
   );
 }
-// Modal
-// UseAppDispatch(
-//   setcentermodalhelper({
-//     text: "",
-//     caution:true,
-//     ok: {
-//       name: "Proceed",
-//       action: async () => {
-//         UseAppDispatch(handleclose());
-        
-//       },
-//     },
-//     cancel: {
-//       name: "Cancel",
-//       action: async () => {
-//         UseAppDispatch(handleclose());
-//       },
-//     },
-//     open: true,
-//   })
-// );
