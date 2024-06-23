@@ -37,9 +37,14 @@ export default function Dashboard() {
   let [copy1, setcopy1] = useState(false);
   let [modal, setmodal] = useState(false);
   let UseAppDispatch = AppDispatch();
-  let router = useRouter();
+    let router = useRouter();
+    let { currentUser, isLoggedin } = useAppSelector((state) => state.authUser);
   let { fullname, email, id, refCode } = useAppSelector((state) => state.user);
-
+  useEffect(() => {
+    if (isLoggedin) {
+      // router.push("/dashboard")
+    }
+  }, [isLoggedin]);
   let [data, setdata] = useState({
     bank: "",
     amount: "",
@@ -254,7 +259,7 @@ export default function Dashboard() {
           </div>
           <div className="w-full flex justify-between mb-10">
             <div>
-              <p>Total Balance</p>
+              <p>Current Balance</p>
               <h1 className="font-nueubig text-[30px] max-sm:text-[23px]">
                 &#x24;00.00
               </h1>
@@ -288,14 +293,14 @@ export default function Dashboard() {
               {[
                 [
                   {
-                    head: "Invited Users (Today)",
+                    head: "Total Suscribed Users",
                     number: "0",
                     arrowicon: c_up,
                     percent: "0",
                     time: "than yesterday",
                   },
                   {
-                    head: "Total Withdrawal",
+                    head: "New Subscriber (24hrs)",
                     number: "0",
                     arrowicon: c_up,
                     percent: "0%",
@@ -304,14 +309,14 @@ export default function Dashboard() {
                 ],
                 [
                   {
-                    head: "Last Withdrawal",
+                    head: "Total Withdrawal",
                     number: "0",
                     arrowicon: c_up,
                     percent: "0",
                     time: "than last week",
                   },
                   {
-                    head: "Total Invited Users",
+                    head: "Last Withdrawal",
                     number: "0",
                     arrowicon: c_down,
                     down: true,
