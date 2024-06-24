@@ -73,7 +73,7 @@ export default function Login() {
                 })}
               </Fade>
             </div>
-            <div className="flex flex-col w-full max-w-[500px] px-5 gap-10 lg:mb-auto">
+            <div className="flex flex-col md:h-[calc(100%-220px)] overflow-y-scroll w-full max-w-[500px] px-5 gap-10 lg:mb-auto">
               <div>
                 <Image
                   src={logo3}

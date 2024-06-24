@@ -23,10 +23,12 @@ import { useEffect, useState } from "react";
 import { useAppSelector, AppDispatch } from "@/redux/store/store";
 import { useRouter } from "next/router";
 import { auth } from "@/firebase/init";
-import { addGeneral } from "@/firebase/firebase_func";
+import { addGeneral, readUniqueRef } from "@/firebase/firebase_func";
 import { randomId, setErrorHelper } from "@/components/utils/utils";
 import { setuser } from "@/redux/slices/user";
 import { setcurrentUser, setisLoggedin } from "@/redux/slices/auth";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
 const getCharacterValidationError = (str) => {
   return `Your password must have at least 1 ${str} character`;
 };
@@ -43,6 +45,7 @@ let userSignupSchema = object({
   fullname: string().required("Please enter  your full name").max(30),
 
   email: string().email().required("Please enter your email"),
+  ref: string().email().required("Please enter your refCode"),
 
   password: string()
     .required("Please enter a password")
@@ -59,6 +62,7 @@ let userSignupSchema = object({
   //   .oneOf([ref("password")], "Passwords does not match"),
 });
 
+let timeout = null
 export default function Signup() {
   let UseAppDispatch = AppDispatch();
 
@@ -66,6 +70,8 @@ export default function Signup() {
   let { currentUser, isLoggedin } = useAppSelector((state) => state.authUser);
   console.log("jdjdjdj7777");
   let [loading, setLoading] = useState(false);
+    let [loading1, setLoading1] = useState(false);
+    let [uref , seturef] =useState(false)
   let [data, setdata] = useState({
     password: "",
     email: "",
@@ -105,7 +111,7 @@ export default function Signup() {
                 })}
               </Fade>
             </div>
-            <div className="flex flex-col w-full max-w-[500px] px-5 gap-10 lg:mb-auto">
+            <div className="flex flex-col w-full max-w-[500px] md:h-[calc(100%-220px)] overflow-y-scroll px-5 gap-10 lg:mb-auto">
               <div>
                 <h1 className="text-[30px]">Let’s Get Started!</h1>
                 <p className="font-nueuthin">
@@ -133,13 +139,73 @@ export default function Signup() {
                   placeholder="Email Address"
                   type="email"
                 />
-                <CustomInput
-                  value={data.ref}
-                  onChange={(value) => {
+                              <CustomInput
+                                   lastE={
+
+                                    loading1 ?
+                                    
+                                  <svg
+                                  className="animate-spin h-5 w-5 text-current"
+                                  fill="none"
+                                  viewBox="0 0 24 24"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <circle
+                                    className="opacity-25"
+                                    cx="12"
+                                    cy="12"
+                                    r="10"
+                                    stroke="currentColor"
+                                    strokeWidth="4"
+                                  />
+                                  <path
+                                    className="opacity-75"
+                                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                                    fill="currentColor"
+                                  />
+                                          </svg> : 
+
+                                          uref ?
+                                          <FontAwesomeIcon
+                                          className="text-[black] w-[15px]"
+                                          icon={faCheck}
+                                        />
+                                              :
+                                          
+                                          
+                                          <></>
+                                }
+                                  value={data.ref}
+                                  
+                                  onChange={async (value) => {
+                                      clearTimeout(timeout)
+                                      console.log(uref)
+                                      seturef(false)
+                      
+                                    timeout=  setTimeout(async () => {
+                                          try {
+                                              setLoading1(true)
+                                          let b =    await readUniqueRef("profile",value)
+                                          console.log(b,"bb")
+                                              if (b) {
+                                              seturef(true)
+                                              } else {
+                                                return setErrorHelper("This refCode has alreaddy being used");
+                                          }
+                                              
+                                          } catch (e) {
+                                              console.log(e)
+                                          }
+                                          finally {
+                                              setLoading1(false)
+                                          }
+                                          
+                                    }, 2000)
+                                      console.log("Dd")
                     setDatahelper("ref", value);
                   }}
                   className="bg-[#F6F6F6] font-nueuthin focus-within:border-[#F6F6F6] rounded-[12px] mb-[4px]"
-                  placeholder="Ref code ..Optional"
+                  placeholder="Ref code"
                   type="text"
                 />
                 {/* <CustomInput type ="input" className="bg-[#F6F6F6] font-nueuthin focus-within:border-[#F6F6F6]" placeholder="Password" /> */}
@@ -149,7 +215,8 @@ export default function Signup() {
                     setDatahelper("password", value);
                   }}
                   className="bg-[#F6F6F6] font-nueuthin focus-within:border-[#F6F6F6] rounded-[12px] "
-                  placeholder="Password"
+                                  placeholder="Password"
+                                 
                 />
 
                 {/* <Input type={ "email"} placeholder="email" /> */}
@@ -188,7 +255,11 @@ export default function Signup() {
                       return setErrorHelper(e.errors[e.errors.length - 1]);
                     }
 
-                    try {
+                      try {
+                        
+                          if (!uref) {
+                            return setErrorHelper("please select a unique refCode");
+                        }
                       setLoading(true);
                       console.log(data);
 
@@ -196,7 +267,12 @@ export default function Signup() {
                         auth,
                         data.email,
                         data.password
-                      );
+                          );
+                        // let v = {
+                        //     user: {
+                        //         uid:randomId(12)
+                        //     }
+                        // }
 
                       console.log(v, "Ddd");
                       console.log(v.user.uid);
@@ -204,8 +280,8 @@ export default function Signup() {
                         email: data.email,
                         fullname: data.fullname,
                         id: v.user.uid,
-                        refCode: randomId(6),
-                        ref: data.ref,
+                        // refCode: randomId(6),
+                        refCode: data.ref,
                       };
 
                       let c = await addGeneral(

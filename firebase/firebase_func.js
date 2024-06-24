@@ -8,7 +8,7 @@ import { app } from "./init";
 //  await  set(ref(db, path), obj);
 // }
 
-import { collection, addDoc, getFirestore, setDoc, doc, getDocs, getDoc } from "firebase/firestore";
+import { collection, addDoc, getFirestore, setDoc, doc, getDocs, getDoc, query, where } from "firebase/firestore";
 import { setErrorHelper } from "@/components/utils/utils";
 // import {db} from '../firebase';
    
@@ -72,4 +72,75 @@ export const  readGeneral = async (collection_,id) => {
         }
             console.error("Error adding document: ");
           }
+    }
+export const  readUniqueRef = async (collection_,filter) => {
+    // e.preventDefault();  
+    console.log("12222")
+    const db =  getFirestore(app);
+    console.log("33332")
+    
+    try {
+        // const col =  collection(db, collection_)
+        console.log("3333ssss2")
+
+
+
+
+        // await getDocs(collection(db, "todos"))
+        //     .then((querySnapshot)=>{               
+        //         const newData = querySnapshot.docs
+        //             .map((doc) => ({...doc.data(), id:doc.id }));
+        //         setTodos(newData);                
+        //         console.log(todos, newData);
+        //     })
+
+
+
+        const q = query(collection(db, collection_), where("refCode", "==", filter));
+
+        const docSnap = await getDocs(q);
+        // querySnapshot.forEach((doc) => {
+        //   // doc.data() is never undefined for query doc snapshots
+        //   console.log(doc.id, " => ", doc.data());
+        // });
+        
+
+
+        docSnap.forEach((doc) => {
+            // doc.data() is never undefined for query doc snapshots
+            console.log(doc.id, " => ", doc.data());
+          });
+
+        // let docSnap =   await getDoc(doc( col, id))
+        // .then((querySnapshot)=>{
+            console.log("3333ssssssssss2")
+            //     const newData = querySnapshot.docs
+            //         .map((doc) => ({...doc.data(), id:doc.id }));
+            
+            //     console.log( newData);
+            // })
+        let vdoc = []
+            docSnap.forEach((doc) => {
+                // doc.data() is never undefined for query doc snapshots
+                vdoc.push("")
+              });
+            console.log("3333ssssssssssssssss2",docSnap,"mvmv")
+            if (vdoc.length>0) {
+                
+            return  false
+            // console.log("Document data:", docSnap.data());
+          } else {
+            // docSnap.data() will be undefined in this case
+            console.log("No such document!");
+            return true
+          }
+        
+    } catch (e) {
+        
+        if (e.message) {
+            setErrorHelper(e.message)
+        }
+            console.error(e);
+    }
+    return false
     }

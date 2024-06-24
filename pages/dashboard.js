@@ -118,7 +118,7 @@ export default function Dashboard() {
                     UseAppDispatch(
                       setcentermodalhelper({
                         head: "Transaction Processing",
-                        text: "Your Transaction will be completed within the next 48 hours",
+                        text: "Your Transaction will be completed within 5 working days",
 
                         ok: {
                           name: "continue",

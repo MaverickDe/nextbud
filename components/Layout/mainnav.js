@@ -135,7 +135,7 @@ const Nav = () => {
                 );
               })}
             </div>
-            <div className=" max-md:hidden text-primary flex gap-[10px] flex-col md:flex-row  justify-center md:items-center ">
+            {/* <div className=" max-md:hidden text-primary flex gap-[10px] flex-col md:flex-row  justify-center md:items-center ">
         
               <Link
                 onClick={() => {
@@ -147,7 +147,7 @@ const Nav = () => {
                Become an Influencer
               </Link>
           
-            </div>
+            </div> */}
         <div
           onClick={() => {
             UseAppDispatch(setmenu1(false));
@@ -183,7 +183,7 @@ const Nav = () => {
                 );
               })}
             </div>
-            <div className="text-primary flex gap-[10px] flex-col md:flex-row  justify-center md:items-center ">
+            {/* <div className="text-primary flex gap-[10px] flex-col md:flex-row  justify-center md:items-center ">
         
               <Link
                 onClick={() => {
@@ -195,7 +195,7 @@ const Nav = () => {
                Become an Influencer
               </Link>
           
-            </div>
+            </div> */}
           </div>
         </div>
         <div

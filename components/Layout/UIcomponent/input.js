@@ -29,6 +29,8 @@ export default function CustomInput(prop) {
           placeholder={prop.placeholder || ""}
           
         />
+
+        {prop.lastE  && prop.lastE}
    
                            
                         </div>
