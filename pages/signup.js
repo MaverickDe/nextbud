@@ -16,6 +16,8 @@ import CustomInput from "@/components/Layout/UIcomponent/input.js";
 import Link from "next/link";
 import {
   createUserWithEmailAndPassword,
+  sendEmailVerification,
+  sendSignInLinkToEmail,
   signInWithEmailAndPassword,
 } from "firebase/auth";
 
@@ -29,6 +31,7 @@ import { setuser } from "@/redux/slices/user";
 import { setcurrentUser, setisLoggedin } from "@/redux/slices/auth";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import { DOMAIN } from "@/components/const";
 const getCharacterValidationError = (str) => {
   return `Your password must have at least 1 ${str} character`;
 };
@@ -45,7 +48,7 @@ let userSignupSchema = object({
   fullname: string().required("Please enter  your full name").max(30),
 
   email: string().email().required("Please enter your email"),
-  ref: string().email().required("Please enter your refCode"),
+  ref: string().required("Please enter your refCode"),
 
   password: string()
     .required("Please enter a password")
@@ -256,8 +259,10 @@ export default function Signup() {
                     }
 
                       try {
+
+                        let b =    await readUniqueRef("profile",data.ref)
                         
-                          if (!uref) {
+                          if (!uref || !b) {
                             return setErrorHelper("please select a unique refCode");
                         }
                       setLoading(true);
@@ -274,8 +279,8 @@ export default function Signup() {
                         //     }
                         // }
 
-                      console.log(v, "Ddd");
-                      console.log(v.user.uid);
+                
+                
                       let obj = {
                         email: data.email,
                         fullname: data.fullname,
@@ -289,18 +294,53 @@ export default function Signup() {
 
                         obj,
                         "profile"
-                      );
-                      UseAppDispatch(setuser(obj));
-                      UseAppDispatch(setisLoggedin(true));
+                          );
 
-                      UseAppDispatch(setcurrentUser(v.user));
 
-                      router.push("/dashboard");
+                     
+
+
+                         
+                        sendEmailVerification(auth.currentUser)
+                        .then(() => {
+                                // The link was successfully sent. Inform the user.
+                                // Save the email locally so you don't need to ask the user for it again
+                                // if they open the link on the same device.
+                                window.localStorage.setItem('emailForSignIn', data.email);
+                                return setErrorHelper("an email verifiction has being send to yor email, please verify your email");
+                                // ...
+                        })
+                        .catch((error) => {
+                                const errorCode = error.code;
+                            const errorMessage = error.message;
+                            console.log(error)
+                                // ...
+                        });
+                          
+                          
+
+
+
+                    //   UseAppDispatch(setuser(obj));
+                    //   UseAppDispatch(setisLoggedin(true));
+
+                    //   UseAppDispatch(setcurrentUser(v.user));
+
+                        //   router.push("/login");
+                          
+
+
+
                     } catch (e) {
-                      if (e.message) {
-                        setErrorHelper(e.message);
+                          if (e.message) {
+                          
+                              if(e.message.trim() =="Firebase: Error (auth/email-already-in-use)")
+                                setErrorHelper("Email already in use");
+                              } else {
+                              setErrorHelper(e.message);
+                              
                       }
-                      console.error("Error adding document: ");
+                      console.error(e,"mvmv");
 
                       console.log(e);
                     } finally {

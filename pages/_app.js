@@ -70,7 +70,7 @@ export default function App({ Component, pageProps }) {
         </div>
       )}
 
-      <div className="err  w-full min-h-[50px] text-red fixed top-[100px] flex justify-center items-center z-50  hidden">
+      <div className="err font-nueuthin  w-full min-h-[50px] text-red fixed top-[100px] flex justify-center items-center z-50  hidden">
         <div className="p-5 shadow-md min-w-[100px] dark:bg-dark2 bg-[white] rounded-md"></div>
       </div>
       <ReduxProvider>

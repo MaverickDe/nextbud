@@ -15,6 +15,10 @@ const initialState = {
     reducers: {
       setuser: (state, action) => {
         console.log("ddkdkd")
+
+        if (!action.payload) {
+        action.payload={}
+      }
         state.fullname=action.payload.fullname||""
         state.id=action.payload.id||""
         state.email = action.payload.email || ""
