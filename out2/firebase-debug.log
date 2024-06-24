@@ -1,0 +1,128 @@
+[debug] [2024-06-23T14:43:28.091Z] ----------------------------------------------------------------------
+[debug] [2024-06-23T14:43:28.096Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Prince\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-06-23T14:43:28.097Z] CLI Version:   13.11.4
+[debug] [2024-06-23T14:43:28.098Z] Platform:      win32
+[debug] [2024-06-23T14:43:28.098Z] Node Version:  v18.17.0
+[debug] [2024-06-23T14:43:28.099Z] Time:          Sun Jun 23 2024 15:43:28 GMT+0100 (West Africa Standard Time)
+[debug] [2024-06-23T14:43:28.099Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-06-23T14:43:28.112Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-06-23T14:43:28.113Z] > authorizing via signed-in user (nextbud.app@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Prince\Desktop\landingpage\out
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-06-23T14:44:06.180Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2024-06-23T14:44:07.366Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2024-06-23T14:44:07.366Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project nextbudlanding (Nextbud Web) 
+[info] 
+=== Hosting Setup
+[debug] [2024-06-23T14:44:12.195Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/nextbudlanding [none]
+[debug] [2024-06-23T14:44:13.136Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/nextbudlanding 200
+[debug] [2024-06-23T14:44:13.136Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/nextbudlanding {"projectId":"nextbudlanding","projectNumber":"109467398171","displayName":"Nextbud Web","name":"projects/nextbudlanding","resources":{"hostingSite":"nextbudlanding"},"state":"ACTIVE","etag":"1_febcb2c1-2641-4a7d-ae47-8e921b21d07c"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2024-06-23T14:45:22.954Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2024-06-23T14:45:24.468Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2024-06-23T14:45:24.468Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"10.12.2","browserURL":"https://www.gstatic.com/firebasejs/10.12.2/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/10.12.2/firebase.tgz"},"live":{"version":"10.12","browserURL":"https://www.gstatic.com/firebasejs/live/10.12/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/10.12/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/10.12.2/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/10.12.2/firebase-auth/cordova.js","auth/web-extension":"https://www.gstatic.com/firebasejs/10.12.2/firebase-auth/web-extension.js","functions":"https://www.gstatic.com/firebasejs/10.12.2/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/10.12.2/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/10.12.2/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/10.12.2/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/10.12.2/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/10.12.2/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/10.12.2/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js","vertexai-preview":"https://www.gstatic.com/firebasejs/10.12.2/firebase-vertexai-preview.js","firestore.memory":"https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.memory.js"}}
+[info] +  Wrote out/index.html 
+[info] 
+[info] i  Detected a .git folder at C:\Users\Prince\Desktop\landingpage\out 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=153813851&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2024-06-23T14:47:08.133Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2024-06-23T14:47:08.135Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2024-06-23T14:47:09.209Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2024-06-23T14:47:09.210Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2024-06-23T14:47:09.223Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2024-06-23T14:47:10.675Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2024-06-23T14:47:10.676Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"MaverickDe","id":100746581,"node_id":"U_kgDOBgFFVQ","avatar_url":"https://avatars.githubusercontent.com/u/100746581?v=4","gravatar_id":"","url":"https://api.github.com/users/MaverickDe","html_url":"https://github.com/MaverickDe","followers_url":"https://api.github.com/users/MaverickDe/followers","following_url":"https://api.github.com/users/MaverickDe/following{/other_user}","gists_url":"https://api.github.com/users/MaverickDe/gists{/gist_id}","starred_url":"https://api.github.com/users/MaverickDe/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/MaverickDe/subscriptions","organizations_url":"https://api.github.com/users/MaverickDe/orgs","repos_url":"https://api.github.com/users/MaverickDe/repos","events_url":"https://api.github.com/users/MaverickDe/events{/privacy}","received_events_url":"https://api.github.com/users/MaverickDe/received_events","type":"User","site_admin":false,"name":"Princewill Asotibe","company":"YEMA","blog":"linkedin.com/in/princewill-asotibe-b31036204/","location":"Anambra,Nigeria","email":"princewillasotibe123@gmail.com","hireable":true,"bio":"Full stack developer in JavaScript ,  React Js and Express JS    ||   GraphQL   ||  Docker ||  SQL       Data scientist in python    ||     python programmer","twitter_username":"Princemave123","public_repos":33,"public_gists":4,"followers":42,"following":6,"created_at":"2022-03-02T04:18:52Z","updated_at":"2024-06-22T01:58:22Z","private_gists":2,"total_private_repos":7,"owned_private_repos":7,"disk_usage":271197,"collaborators":1,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as MaverickDe 
+[info] 
+[debug] [2024-06-23T14:48:08.220Z] >>> [apiv2][query] GET https://api.github.com/repos/MaverickDe/nextbudbuild1/actions/secrets/public-key type=owner
+[debug] [2024-06-23T14:48:09.207Z] <<< [apiv2][status] GET https://api.github.com/repos/MaverickDe/nextbudbuild1/actions/secrets/public-key 200
+[debug] [2024-06-23T14:48:09.208Z] <<< [apiv2][body] GET https://api.github.com/repos/MaverickDe/nextbudbuild1/actions/secrets/public-key {"key_id":"3380204578043523366","key":"B2xb3mjeqnEdIkwPdbP9YJ06J9twcmDnTyf1NHrJsGM="}
+[debug] [2024-06-23T14:48:09.210Z] >>> [apiv2][query] GET https://api.github.com/repos/MaverickDe/nextbudbuild1 [none]
+[debug] [2024-06-23T14:48:10.559Z] <<< [apiv2][status] GET https://api.github.com/repos/MaverickDe/nextbudbuild1 200
+[debug] [2024-06-23T14:48:10.560Z] <<< [apiv2][body] GET https://api.github.com/repos/MaverickDe/nextbudbuild1 {"id":818993331,"node_id":"R_kgDOMNDYsw","name":"nextbudbuild1","full_name":"MaverickDe/nextbudbuild1","private":true,"owner":{"login":"MaverickDe","id":100746581,"node_id":"U_kgDOBgFFVQ","avatar_url":"https://avatars.githubusercontent.com/u/100746581?v=4","gravatar_id":"","url":"https://api.github.com/users/MaverickDe","html_url":"https://github.com/MaverickDe","followers_url":"https://api.github.com/users/MaverickDe/followers","following_url":"https://api.github.com/users/MaverickDe/following{/other_user}","gists_url":"https://api.github.com/users/MaverickDe/gists{/gist_id}","starred_url":"https://api.github.com/users/MaverickDe/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/MaverickDe/subscriptions","organizations_url":"https://api.github.com/users/MaverickDe/orgs","repos_url":"https://api.github.com/users/MaverickDe/repos","events_url":"https://api.github.com/users/MaverickDe/events{/privacy}","received_events_url":"https://api.github.com/users/MaverickDe/received_events","type":"User","site_admin":false},"html_url":"https://github.com/MaverickDe/nextbudbuild1","description":null,"fork":false,"url":"https://api.github.com/repos/MaverickDe/nextbudbuild1","forks_url":"https://api.github.com/repos/MaverickDe/nextbudbuild1/forks","keys_url":"https://api.github.com/repos/MaverickDe/nextbudbuild1/keys{/key_id}","collaborators_url":"https://api.github.com/repos/MaverickDe/nextbudbuild1/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/MaverickDe/nextbudbuild1/teams","hooks_url":"https://api.github.com/repos/MaverickDe/nextbudbuild1/hooks","issue_events_url":"https://api.github.com/repos/MaverickDe/nextbudbuild1/issues/events{/number}","events_url":"https://api.github.com/repos/MaverickDe/nextbudbuild1/events","assignees_url":"https://api.github.com/repos/MaverickDe/nextbudbuild1/assignees{/user}","branches_url":"https://api.github.com/repos/MaverickDe/nextbudbuild1/branches{/branch}","tags_url":"https://api.github.com/repos/MaverickDe/nextbudbuild1/tags","blobs_url":"https://api.github.com/repos/MaverickDe/nextbudbuild1/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/MaverickDe/nextbudbuild1/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/MaverickDe/nextbudbuild1/git/refs{/sha}","trees_url":"https://api.github.com/repos/MaverickDe/nextbudbuild1/git/trees{/sha}","statuses_url":"https://api.github.com/repos/MaverickDe/nextbudbuild1/statuses/{sha}","languages_url":"https://api.github.com/repos/MaverickDe/nextbudbuild1/languages","stargazers_url":"https://api.github.com/repos/MaverickDe/nextbudbuild1/stargazers","contributors_url":"https://api.github.com/repos/MaverickDe/nextbudbuild1/contributors","subscribers_url":"https://api.github.com/repos/MaverickDe/nextbudbuild1/subscribers","subscription_url":"https://api.github.com/repos/MaverickDe/nextbudbuild1/subscription","commits_url":"https://api.github.com/repos/MaverickDe/nextbudbuild1/commits{/sha}","git_commits_url":"https://api.github.com/repos/MaverickDe/nextbudbuild1/git/commits{/sha}","comments_url":"https://api.github.com/repos/MaverickDe/nextbudbuild1/comments{/number}","issue_comment_url":"https://api.github.com/repos/MaverickDe/nextbudbuild1/issues/comments{/number}","contents_url":"https://api.github.com/repos/MaverickDe/nextbudbuild1/contents/{+path}","compare_url":"https://api.github.com/repos/MaverickDe/nextbudbuild1/compare/{base}...{head}","merges_url":"https://api.github.com/repos/MaverickDe/nextbudbuild1/merges","archive_url":"https://api.github.com/repos/MaverickDe/nextbudbuild1/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/MaverickDe/nextbudbuild1/downloads","issues_url":"https://api.github.com/repos/MaverickDe/nextbudbuild1/issues{/number}","pulls_url":"https://api.github.com/repos/MaverickDe/nextbudbuild1/pulls{/number}","milestones_url":"https://api.github.com/repos/MaverickDe/nextbudbuild1/milestones{/number}","notifications_url":"https://api.github.com/repos/MaverickDe/nextbudbuild1/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/MaverickDe/nextbudbuild1/labels{/name}","releases_url":"https://api.github.com/repos/MaverickDe/nextbudbuild1/releases{/id}","deployments_url":"https://api.github.com/repos/MaverickDe/nextbudbuild1/deployments","created_at":"2024-06-23T13:21:14Z","updated_at":"2024-06-23T14:36:01Z","pushed_at":"2024-06-23T14:35:55Z","git_url":"git://github.com/MaverickDe/nextbudbuild1.git","ssh_url":"git@github.com:MaverickDe/nextbudbuild1.git","clone_url":"https://github.com/MaverickDe/nextbudbuild1.git","svn_url":"https://github.com/MaverickDe/nextbudbuild1","homepage":null,"size":0,"stargazers_count":0,"watchers_count":0,"language":"HTML","has_issues":true,"has_projects":true,"has_downloads":true,"has_wiki":false,"has_pages":false,"has_discussions":false,"forks_count":0,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":0,"license":null,"allow_forking":true,"is_template":false,"web_commit_signoff_required":false,"topics":[],"visibility":"private","forks":0,"open_issues":0,"watchers":0,"default_branch":"main","permissions":{"admin":true,"maintain":true,"push":true,"triage":true,"pull":true},"temp_clone_token":"AYAUKVJYZICJMBBTRGVJVCLGPA3NM","allow_squash_merge":true,"allow_merge_commit":true,"allow_rebase_merge":true,"allow_auto_merge":false,"delete_branch_on_merge":false,"allow_update_branch":false,"use_squash_pr_title_as_default":false,"squash_merge_commit_message":"COMMIT_MESSAGES","squash_merge_commit_title":"COMMIT_OR_PR_TITLE","merge_commit_message":"PR_TITLE","merge_commit_title":"MERGE_MESSAGE","network_count":0,"subscribers_count":1}
+[debug] [2024-06-23T14:48:10.562Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/nextbudlanding/serviceAccounts [none]
+[debug] [2024-06-23T14:48:10.562Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/nextbudlanding/serviceAccounts {"accountId":"github-action-818993331","serviceAccount":{"displayName":"GitHub Actions (MaverickDe/nextbudbuild1)","description":"A service account with permission to deploy to Firebase Hosting and Cloud Functions for the GitHub repository MaverickDe/nextbudbuild1"}}
+[debug] [2024-06-23T14:48:13.100Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/nextbudlanding/serviceAccounts 200
+[debug] [2024-06-23T14:48:13.100Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/nextbudlanding/serviceAccounts [omitted]
+[debug] [2024-06-23T14:48:13.102Z] >>> [apiv2][query] GET https://iam.googleapis.com/v1/projects/nextbudlanding/serviceAccounts/github-action-818993331@nextbudlanding.iam.gserviceaccount.com [none]
+[debug] [2024-06-23T14:48:13.106Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/nextbudlanding:getIamPolicy [none]
+[debug] [2024-06-23T14:48:41.157Z] *** [apiv2] error from fetch(https://iam.googleapis.com/v1/projects/nextbudlanding/serviceAccounts/github-action-818993331@nextbudlanding.iam.gserviceaccount.com, {"headers":{},"method":"GET"}): FetchError: request to https://iam.googleapis.com/v1/projects/nextbudlanding/serviceAccounts/github-action-818993331@nextbudlanding.iam.gserviceaccount.com failed, reason: socket hang up
+[debug] [2024-06-23T14:48:41.160Z] >>> [apiv2][query] GET https://iam.googleapis.com/v1/projects/nextbudlanding/serviceAccounts/github-action-818993331@nextbudlanding.iam.gserviceaccount.com/keys [none]
+[debug] [2024-06-23T14:49:00.527Z] *** [apiv2] error from fetch(https://cloudresourcemanager.googleapis.com/v1/projects/nextbudlanding:getIamPolicy, {"headers":{},"method":"POST"}): FetchError: request to https://cloudresourcemanager.googleapis.com/v1/projects/nextbudlanding:getIamPolicy failed, reason: socket hang up
+[debug] [2024-06-23T14:49:02.180Z] *** [apiv2] error from fetch(https://iam.googleapis.com/v1/projects/nextbudlanding/serviceAccounts/github-action-818993331@nextbudlanding.iam.gserviceaccount.com/keys, {"headers":{},"method":"GET"}): FetchError: request to https://iam.googleapis.com/v1/projects/nextbudlanding/serviceAccounts/github-action-818993331@nextbudlanding.iam.gserviceaccount.com/keys failed, reason: connect ETIMEDOUT 172.217.168.170:443
+[debug] [2024-06-23T14:49:07.187Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\Prince\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:267:49)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-06-23T14:51:08.827Z] ----------------------------------------------------------------------
+[debug] [2024-06-23T14:51:08.848Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Prince\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-06-23T14:51:08.852Z] CLI Version:   13.11.4
+[debug] [2024-06-23T14:51:08.853Z] Platform:      win32
+[debug] [2024-06-23T14:51:08.855Z] Node Version:  v18.17.0
+[debug] [2024-06-23T14:51:08.857Z] Time:          Sun Jun 23 2024 15:51:08 GMT+0100 (West Africa Standard Time)
+[debug] [2024-06-23T14:51:08.859Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-06-23T14:51:08.906Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-06-23T14:51:08.909Z] > authorizing via signed-in user (nextbud.app@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Prince\Desktop\landingpage\out
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-06-23T14:51:34.834Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2024-06-23T14:51:35.966Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2024-06-23T14:51:35.966Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project nextbudlanding (Nextbud Web) 
+[info] 
+=== Hosting Setup
+[debug] [2024-06-23T14:51:38.541Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/nextbudlanding [none]
+[debug] [2024-06-23T14:51:39.232Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/nextbudlanding 200
+[debug] [2024-06-23T14:51:39.232Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/nextbudlanding {"projectId":"nextbudlanding","projectNumber":"109467398171","displayName":"Nextbud Web","name":"projects/nextbudlanding","resources":{"hostingSite":"nextbudlanding"},"state":"ACTIVE","etag":"1_febcb2c1-2641-4a7d-ae47-8e921b21d07c"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
