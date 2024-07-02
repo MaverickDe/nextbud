@@ -9,7 +9,7 @@ export let setErrorHelper = (message) => {
         div.classList.add("hidden") 
         div.querySelector("div").textContent = ""
       
-    },3000)
+    },1200)
  
   
     

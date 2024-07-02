@@ -70,8 +70,8 @@ export default function App({ Component, pageProps }) {
         </div>
       )}
 
-      <div className="err font-nueuthin  w-full min-h-[50px] text-red fixed top-[100px] flex justify-center items-center z-50  hidden">
-        <div className="p-5 shadow-md min-w-[100px] dark:bg-dark2 bg-[white] rounded-md"></div>
+      <div className="err font-nueuthin  w-full h-full text-red fixed  flex justify-center  z-50  hidden bg-[rgba(255,255,255,0.5)] backdrop-blur-sm">
+        <div className="p-5 shadow-md min-w-[100px] dark:bg-dark2 bg-[white] h-fit mt-[100px] rounded-md"></div>
       </div>
       <ReduxProvider>
         <ThemeProvider>

@@ -14,7 +14,7 @@ export default function CustomInput(prop) {
   return (
 
     <>
-        <div className={`flex gap-5 items-center w-full h-full rounded-md p-3  focus-within:border-red-500 border-[2px] ${prop.className||""}`}>
+        <div className={`flex gap-5 h-fit items-center w-full  rounded-md p-3  focus-within:border-red-500 border-[2px] ${prop.className||""}`}>
         <input className="focus:outline-none w-[calc(100%-40px)] rounded-md bg-transparent " 
           onChange={
             (e) => {

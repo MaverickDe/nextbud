@@ -30,7 +30,7 @@ export default function Login() {
 
   let router = useRouter();
   let { currentUser, isLoggedin } = useAppSelector((state) => state.authUser);
-  console.log("jdjdjdj7777");
+
   let [loading, setLoading] = useState(false);
   let [data, setdata] = useState({
     email: "",
@@ -114,11 +114,9 @@ export default function Login() {
                       if (e.message) {
                         setErrorHelper(e.message);
                       }
-                      console.error("Error adding document: ");
 
                       console.log(e);
                     } finally {
-                      console.log("dkdkdkdk");
                       setTimeout(() => {
                         setLoading(false);
                       }, 2000);

@@ -1,11 +1,11 @@
 import Fade from "@/components/Layout/slick/fade";
 import RootLayout from "@/components/Layout/wrapper/layout1";
 import RootLayout4 from "@/components/Layout/wrapper/layout4";
-import phone1 from "@/public/images/images/phoneslide/phone1.svg";
-import phone2 from "@/public/images/images/phoneslide/phone2.svg";
-import phone3 from "@/public/images/images/phoneslide/phone3.svg";
-import phone4 from "@/public/images/images/phoneslide/phone4.svg";
-import phone5 from "@/public/images/images/phoneslide/phone5.svg";
+import phone1 from "@/public/images/images/phoneslide/SignUp1.png";
+import phone2 from "@/public/images/images/phoneslide/SignUp2.png";
+import phone3 from "@/public/images/images/phoneslide/SignUp3.png";
+import phone4 from "@/public/images/images/phoneslide/SignUp4.png";
+import phone5 from "@/public/images/images/phoneslide/SignUp5.png";
 import logo3 from "@/public/images/logo/logo3.svg";
 import { Button } from "@nextui-org/react";
 // import { Button as bf } from "@mui/material"
@@ -34,7 +34,7 @@ export default function Login() {
 
   let router = useRouter();
   let { currentUser, isLoggedin } = useAppSelector((state) => state.authUser);
-  console.log("jdjdjdj7777");
+
   let [loading, setLoading] = useState(false);
   let [data, setdata] = useState({
     email: "",
@@ -43,7 +43,7 @@ export default function Login() {
 
   useEffect(() => {
     if (isLoggedin) {
-      router.push("/dashboard")
+      router.push("/dashboard");
     }
   }, [isLoggedin]);
 
@@ -109,7 +109,6 @@ export default function Login() {
                   onClick={async () => {
                     try {
                       setLoading(true);
-                      console.log(data);
 
                       let v = await signInWithEmailAndPassword(
                         auth,
@@ -119,20 +118,30 @@ export default function Login() {
 
                       let c = await readGeneral("profile", v.user.uid);
                       UseAppDispatch(setuser(c));
-                      UseAppDispatch(setisLoggedin(true));
+                      if (v.user.emailVerified) {
+                        UseAppDispatch(setisLoggedin(true));
+                      }
 
                       UseAppDispatch(setcurrentUser(v.user));
 
                       router.push("/dashboard");
                     } catch (e) {
                       if (e.message) {
-                        setErrorHelper(e.message);
+                        if (
+                          e.message.trim() ==
+                          "Firebase: Error (auth/missing-password)."
+                        ) {
+                          setErrorHelper("please enter your password");
+                        } else if (
+                          e.message.trim() ==
+                          "Firebase: Error (auth/invalid-credential)."
+                        ) {
+                          setErrorHelper("Invalid Email or password");
+                        } else {
+                          setErrorHelper(e.message);
+                        }
                       }
-                      console.error("Error adding document: ");
-
-                      console.log(e);
                     } finally {
-                      console.log("dkdkdkdk");
                       setTimeout(() => {
                         setLoading(false);
                       }, 2000);
@@ -168,7 +177,12 @@ export default function Login() {
                 </Button>
               </div>
               <div>
-                <p>Forget Password?</p>
+                <Link
+                  href="/resetpassword"
+                  className="text-transparent bg-clip-text bg-[linear-gradient(-45deg,#6067FA,#9864F1)]"
+                >
+                  Forget Password?
+                </Link>
                 <p className=" flex gap-5  items-center">
                   <span className="font-nueuthin">
                     Want to become an Influencer?

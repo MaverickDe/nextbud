@@ -13,7 +13,7 @@ import Marquee from "../Layout/flagmarque";
 
 const Footer = () => {
   return (
-      <section className="w-full p-5  ">
+      <section className="w-full p-5  " id="footer">
             <Marquee/>
     <section className="w-full flex flex-wrap gap-5  justify-between sm:items-center  max-sm:flex-col">
           

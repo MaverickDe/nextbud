@@ -26,18 +26,23 @@ export default function ReduxProviderPage() {
   );
 
   let UseAppDispatch = AppDispatch();
-  
+  console.log(currentUser)
   let initializeUser = (user) => {
+    user.getIdToken(true)
     console.log("statechange",user)
     if (user) {
       UseAppDispatch(
 
         setcurrentUser({...user})
       )
-      UseAppDispatch(
 
-        setisLoggedin(true)
-      )
+      if (user.emailVerified) {
+        
+        UseAppDispatch(
+  
+          setisLoggedin(true)
+        )
+      }
     
     } else {
       UseAppDispatch(
@@ -55,13 +60,13 @@ export default function ReduxProviderPage() {
     
     
     () => {
-      console.log("kfjfkfj")
+      // console.log("kfjfkfj")
     let v =  async () => {
-      console.log(currentUser,id)
+      // console.log(currentUser,id)
       
         
           if (currentUser) {
-            console.log(currentUser.uid,"lllmssssssss")
+            // console.log(currentUser.uid,"lllmssssssss")
         
             let c = await readGeneral("profile", currentUser.uid)
             console.log(c,"lllm")

@@ -31,7 +31,7 @@ export const  addGeneral = async (id,obj,collection_) => {
             console.log("Document written with ID: ");
     } catch (e) {
         if (e.message) {
-            setErrorHelper(e.message)
+            // setErrorHelper(e.message)
         }
             console.error("Error adding document: ");
           }
@@ -68,7 +68,7 @@ export const  readGeneral = async (collection_,id) => {
         
     } catch (e) {
         if (e.message) {
-            setErrorHelper(e.message)
+            // setErrorHelper(e.message)
         }
             console.error("Error adding document: ");
           }
@@ -138,9 +138,9 @@ export const  readUniqueRef = async (collection_,filter) => {
     } catch (e) {
         
         if (e.message) {
-            setErrorHelper(e.message)
-        }
+            // setErrorHelper(e.message)
             console.error(e);
+        }
     }
-    return false
+    return "An error occured"
     }

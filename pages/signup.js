@@ -1,11 +1,11 @@
 import Fade from "@/components/Layout/slick/fade";
 import RootLayout from "@/components/Layout/wrapper/layout1";
 import RootLayout3 from "@/components/Layout/wrapper/layout2";
-import phone1 from "@/public/images/images/phoneslide/phone1.svg";
-import phone2 from "@/public/images/images/phoneslide/phone2.svg";
-import phone3 from "@/public/images/images/phoneslide/phone3.svg";
-import phone4 from "@/public/images/images/phoneslide/phone4.svg";
-import phone5 from "@/public/images/images/phoneslide/phone5.svg";
+import phone1 from "@/public/images/images/phoneslide/SignUp1.png";
+import phone2 from "@/public/images/images/phoneslide/SignUp2.png";
+import phone3 from "@/public/images/images/phoneslide/SignUp3.png";
+import phone4 from "@/public/images/images/phoneslide/SignUp4.png";
+import phone5 from "@/public/images/images/phoneslide/SignUp5.png";
 import logo3 from "@/public/images/logo/logo3.svg";
 import { Button } from "@nextui-org/react";
 import { Button as bf } from "@mui/material";
@@ -30,7 +30,7 @@ import { randomId, setErrorHelper } from "@/components/utils/utils";
 import { setuser } from "@/redux/slices/user";
 import { setcurrentUser, setisLoggedin } from "@/redux/slices/auth";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import { faCancel, faCheck, faX } from "@fortawesome/free-solid-svg-icons";
 import { DOMAIN } from "@/components/const";
 const getCharacterValidationError = (str) => {
   return `Your password must have at least 1 ${str} character`;
@@ -52,29 +52,24 @@ let userSignupSchema = object({
 
   password: string()
     .required("Please enter a password")
-    // check minimum characters
+
     .min(8, "Password must have at least 8 characters")
 
     .matches(/[0-9]/, getCharacterValidationError("digit"))
     .matches(/[a-z]/, getCharacterValidationError("lowercase"))
     .matches(/[A-Z]/, getCharacterValidationError("uppercase")),
-  // confirm_password: string()
-  //   .required("Please re-type your password")
-  //   // use oneOf to match one of the values inside the array.
-  //   // use "ref" to get the value of passwrod.
-  //   .oneOf([ref("password")], "Passwords does not match"),
 });
 
-let timeout = null
+let timeout = null;
 export default function Signup() {
   let UseAppDispatch = AppDispatch();
 
   let router = useRouter();
   let { currentUser, isLoggedin } = useAppSelector((state) => state.authUser);
-  console.log("jdjdjdj7777");
+
   let [loading, setLoading] = useState(false);
-    let [loading1, setLoading1] = useState(false);
-    let [uref , seturef] =useState(false)
+  let [loading1, setLoading1] = useState(false);
+  let [uref, seturef] = useState(false);
   let [data, setdata] = useState({
     password: "",
     email: "",
@@ -126,7 +121,6 @@ export default function Signup() {
                 <CustomInput
                   value={data.fullname}
                   onChange={(value) => {
-                    console.log("jdjdjdj");
                     setDatahelper("fullname", value);
                   }}
                   className="bg-[#F6F6F6] font-nueuthin focus-within:border-[#F6F6F6] rounded-[12px] mb-[4px]"
@@ -142,69 +136,63 @@ export default function Signup() {
                   placeholder="Email Address"
                   type="email"
                 />
-                              <CustomInput
-                                   lastE={
+                <CustomInput
+                  lastE={
+                    loading1 ? (
+                      <svg
+                        className="animate-spin h-5 w-5 text-current"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle
+                          className="opacity-25"
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          strokeWidth="4"
+                        />
+                        <path
+                          className="opacity-75"
+                          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    ) : (
+                      <FontAwesomeIcon
+                        className={` ${
+                          uref ? "text-[blue]" : "text-[red]"
+                        } w-[15px]`}
+                        icon={uref ? faCheck : faX}
+                      />
+                    )
+                  }
+                  value={data.ref}
+                  onChange={async (value) => {
+                    clearTimeout(timeout);
 
-                                    loading1 ?
-                                    
-                                  <svg
-                                  className="animate-spin h-5 w-5 text-current"
-                                  fill="none"
-                                  viewBox="0 0 24 24"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <circle
-                                    className="opacity-25"
-                                    cx="12"
-                                    cy="12"
-                                    r="10"
-                                    stroke="currentColor"
-                                    strokeWidth="4"
-                                  />
-                                  <path
-                                    className="opacity-75"
-                                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                                    fill="currentColor"
-                                  />
-                                          </svg> : 
+                    seturef(false);
 
-                                          uref ?
-                                          <FontAwesomeIcon
-                                          className="text-[black] w-[15px]"
-                                          icon={faCheck}
-                                        />
-                                              :
-                                          
-                                          
-                                          <></>
-                                }
-                                  value={data.ref}
-                                  
-                                  onChange={async (value) => {
-                                      clearTimeout(timeout)
-                                      console.log(uref)
-                                      seturef(false)
-                      
-                                    timeout=  setTimeout(async () => {
-                                          try {
-                                              setLoading1(true)
-                                          let b =    await readUniqueRef("profile",value)
-                                          console.log(b,"bb")
-                                              if (b) {
-                                              seturef(true)
-                                              } else {
-                                                return setErrorHelper("This refCode has alreaddy being used");
-                                          }
-                                              
-                                          } catch (e) {
-                                              console.log(e)
-                                          }
-                                          finally {
-                                              setLoading1(false)
-                                          }
-                                          
-                                    }, 2000)
-                                      console.log("Dd")
+                    timeout = setTimeout(async () => {
+                      try {
+                        setLoading1(true);
+
+                        if (b && value.trim() != "") {
+                          if (typeof b == "string") {
+                            return;
+                            // setErrorHelper(b);
+                          }
+                          seturef(true);
+                        } else {
+                        }
+                      } catch (e) {
+                        console.log(e);
+                      } finally {
+                        setLoading1(false);
+                      }
+                    }, 2000);
+
                     setDatahelper("ref", value);
                   }}
                   className="bg-[#F6F6F6] font-nueuthin focus-within:border-[#F6F6F6] rounded-[12px] mb-[4px]"
@@ -218,8 +206,7 @@ export default function Signup() {
                     setDatahelper("password", value);
                   }}
                   className="bg-[#F6F6F6] font-nueuthin focus-within:border-[#F6F6F6] rounded-[12px] "
-                                  placeholder="Password"
-                                 
+                  placeholder="Password"
                 />
 
                 {/* <Input type={ "email"} placeholder="email" /> */}
@@ -258,29 +245,26 @@ export default function Signup() {
                       return setErrorHelper(e.errors[e.errors.length - 1]);
                     }
 
-                      try {
+                    try {
+                      let b = await readUniqueRef("profile", data.ref);
 
-                        let b =    await readUniqueRef("profile",data.ref)
-                        
-                          if (!uref || !b) {
-                            return setErrorHelper("please select a unique refCode");
-                        }
+                      if (!uref || !b) {
+                        return setErrorHelper("please select a unique refCode");
+                      }
+
                       setLoading(true);
-                      console.log(data);
 
                       let v = await createUserWithEmailAndPassword(
                         auth,
                         data.email,
                         data.password
-                          );
-                        // let v = {
-                        //     user: {
-                        //         uid:randomId(12)
-                        //     }
-                        // }
+                      );
+                      // let v = {
+                      //     user: {
+                      //         uid:randomId(12)
+                      //     }
+                      // }
 
-                
-                
                       let obj = {
                         email: data.email,
                         fullname: data.fullname,
@@ -294,57 +278,44 @@ export default function Signup() {
 
                         obj,
                         "profile"
-                          );
+                      );
 
-
-                     
-
-
-                         
-                        sendEmailVerification(auth.currentUser)
+                      sendEmailVerification(auth.currentUser)
                         .then(() => {
-                                // The link was successfully sent. Inform the user.
-                                // Save the email locally so you don't need to ask the user for it again
-                                // if they open the link on the same device.
-                                window.localStorage.setItem('emailForSignIn', data.email);
-                                return setErrorHelper("an email verifiction has being send to yor email, please verify your email");
-                                // ...
+                          window.localStorage.setItem(
+                            "emailForSignIn",
+                            data.email
+                          );
+                          return setErrorHelper(
+                            "an email verifiction has being send to yor email, please verify your email"
+                          );
+                          // ...
                         })
                         .catch((error) => {
-                                const errorCode = error.code;
-                            const errorMessage = error.message;
-                            console.log(error)
-                                // ...
+                          const errorCode = error.code;
+                          const errorMessage = error.message;
                         });
-                          
-                          
 
+                      UseAppDispatch(setisLoggedin(true));
 
+                      UseAppDispatch(setcurrentUser(v.user));
 
-                    //   UseAppDispatch(setuser(obj));
-                    //   UseAppDispatch(setisLoggedin(true));
-
-                    //   UseAppDispatch(setcurrentUser(v.user));
-
-                        //   router.push("/login");
-                          
-
-
-
+                      router.push("/dashboard");
                     } catch (e) {
-                          if (e.message) {
-                          
-                              if(e.message.trim() =="Firebase: Error (auth/email-already-in-use)")
-                                setErrorHelper("Email already in use");
-                              } else {
-                              setErrorHelper(e.message);
-                              
+                      if (e.message) {
+                        console.log(e.message);
+
+                        if (
+                          e.message.trim() ==
+                          "Firebase: Error (auth/email-already-in-use)."
+                        )
+                          setErrorHelper("Email already in use");
+                      } else {
+                        setErrorHelper(e.message);
                       }
-                      console.error(e,"mvmv");
 
                       console.log(e);
                     } finally {
-                      console.log("dkdkdkdk");
                       setTimeout(() => {
                         setLoading(false);
                       }, 2000);

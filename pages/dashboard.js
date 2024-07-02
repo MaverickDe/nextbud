@@ -31,28 +31,30 @@ import { auth } from "@/firebase/init";
 import { useRouter } from "next/router";
 import { handleclose, setcentermodalhelper } from "@/redux/slices/centermodals";
 import { Modal } from "@mui/material";
+import { readUniqueRef } from "@/firebase/firebase_func";
 
 export default function Dashboard() {
   let [loading1, setLoading1] = useState(false);
   let [copy1, setcopy1] = useState(false);
   let [modal, setmodal] = useState(false);
   let UseAppDispatch = AppDispatch();
-    let router = useRouter();
-    let { currentUser, isLoggedin } = useAppSelector((state) => state.authUser);
+  let router = useRouter();
+  let { currentUser, isLoggedin } = useAppSelector((state) => state.authUser);
   let { fullname, email, id, refCode } = useAppSelector((state) => state.user);
-  useEffect(() => {
-    if (!isLoggedin) {
-      router.push("/login")
-    }
-  }, [isLoggedin]);
+  //   useEffect(() => {
+  //     if (!isLoggedin) {
+  //       router.push("/login")
+  //       }
+
+  //   }, [isLoggedin]);
   let [data, setdata] = useState({
     bank: "",
     amount: "",
     accountNumber: "",
     accountName: "",
+    sortCode: "",
   });
   let [selectItem, setselectItem] = useState("");
-  console.log(",,", fullname, email, "ll");
 
   return (
     <div className="w-full bg-[blue] ">
@@ -74,7 +76,7 @@ export default function Dashboard() {
               value={data.amount}
               className="bg-light2 dark:bg-[#16171F]  border-[1px] rounded-md w-full h-fit min-h-[50px]   px-5"
               placeholder={"amount"}
-              id={"amount"}
+              id={"Amount"}
               type={"number"}
             />
             <input
@@ -83,7 +85,7 @@ export default function Dashboard() {
               }}
               value={data.bank}
               className="bg-light2 dark:bg-[#16171F]   border-[1px] rounded-md w-full h-fit min-h-[50px]   px-5"
-              placeholder={"bank"}
+              placeholder={"Bank"}
               id={"bank"}
               type={"text"}
             />
@@ -93,8 +95,18 @@ export default function Dashboard() {
               }}
               value={data.accountNumber}
               className="bg-light2 dark:bg-[#16171F]  border-[1px] rounded-md w-full h-fit min-h-[50px]   px-5"
-              placeholder={"accountNumber"}
+              placeholder={"Account Number"}
               id={"accountNumber"}
+              type={"number"}
+            />
+            <input
+              onChange={(ee) => {
+                setdata({ ...data, sortCode: ee.currentTarget.value });
+              }}
+              value={data.sortCode}
+              className="bg-light2 dark:bg-[#16171F]  border-[1px] rounded-md w-full h-fit min-h-[50px]   px-5"
+              placeholder={"Sort Code"}
+              id={"sortCode"}
               type={"number"}
             />
             <input
@@ -103,7 +115,7 @@ export default function Dashboard() {
               }}
               value={data.accountName}
               className="bg-light2 dark:bg-[#16171F] border-[1px] rounded-md w-full h-fit min-h-[50px]   px-5"
-              placeholder={"accountName"}
+              placeholder={"Account Name"}
               id={"accountName"}
               type={"text"}
             />
@@ -113,7 +125,6 @@ export default function Dashboard() {
                 onClick={async () => {
                   try {
                     setLoading1(true);
-                    console.log(data);
 
                     UseAppDispatch(
                       setcentermodalhelper({

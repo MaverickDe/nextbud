@@ -119,7 +119,7 @@ const Nav = () => {
               {[
                 { link: "/#aboutus", name: "About us" },
                 { link: "/#features", name: "Product Features" },
-                { link: "/privacy", name: "Contact us" },
+                { link: "#footer", name: "Contact us" },
               ].map((e, index) => {
                 return (
                   <Link
@@ -157,7 +157,7 @@ const Nav = () => {
               {[
                 { link: "/#aboutus", name: "About us" },
                 { link: "/#features", name: "Product Features" },
-                { link: "/privacy", name: "Contact us" },
+                { link: "#footer", name: "Contact us" },
               ].map((e, index) => {
                 return (
                   <Link

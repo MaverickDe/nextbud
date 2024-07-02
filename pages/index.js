@@ -32,8 +32,6 @@ export default function Home() {
           }
         />
       </Head>
-      {/* <Layout> */}
-      {/* <Mainnav/> */}
 
       <RootLayout>
         <HeroSection />
@@ -42,7 +40,6 @@ export default function Home() {
 
         <Solution />
       </RootLayout>
-      {/* <Sub />  */}
     </>
   );
 }

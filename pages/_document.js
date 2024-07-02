@@ -25,6 +25,8 @@ export default function Document() {
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest"></link>
+    <Script strategy="beforeInteractive" src="script/chat.js" />
+
       </Head>
 
       <body className="text-secondary dark:text-secondary2  w-[100vw] h-[100vh]   flex flex-col items-center">
